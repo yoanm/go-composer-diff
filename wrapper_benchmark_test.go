@@ -2,9 +2,10 @@ package compdiff_test
 
 import (
 	"fmt"
-	"github.com/yoanm/go-composer-diff"
 	"os"
 	"testing"
+
+	compdiff "github.com/yoanm/go-composer-diff"
 )
 
 func BenchmarkBuildMapFromBytes(b *testing.B) {

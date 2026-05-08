@@ -3,10 +3,11 @@ package compdiff_test
 import (
 	"errors"
 	"fmt"
-	compdiff "github.com/yoanm/go-composer-diff"
 	"testing"
 
 	"github.com/yoanm/go-deps-diff/contract"
+
+	compdiff "github.com/yoanm/go-composer-diff"
 )
 
 func TestAbandonedNullAndNumber(t *testing.T) {

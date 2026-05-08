@@ -2,7 +2,8 @@ package compdiff
 
 import (
 	"fmt"
-	compdiff "github.com/yoanm/go-deps-diff"
+
+	depsdiff "github.com/yoanm/go-deps-diff"
 	"github.com/yoanm/go-deps-diff/contract"
 )
 
@@ -17,5 +18,6 @@ func Diff(previous, current *Input) (contract.DiffMap, error) {
 		return nil, fmt.Errorf("building current package map: %w", err)
 	}
 
-	return compdiff.Diff(previousMap, currentMap)
+	//nolint:wrapcheck // Diff is the main purpose, so we don't want to wrap the error it can return
+	return depsdiff.Diff(previousMap, currentMap)
 }

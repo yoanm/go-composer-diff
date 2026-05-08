@@ -2,8 +2,9 @@ package compdiff_test
 
 import (
 	"fmt"
-	compdiff "github.com/yoanm/go-composer-diff"
 	"testing"
+
+	compdiff "github.com/yoanm/go-composer-diff"
 )
 
 func TestParseLock(t *testing.T) {

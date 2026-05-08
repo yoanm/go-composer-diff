@@ -3,8 +3,9 @@ package compdiff_test
 import (
 	"encoding/json"
 	"fmt"
-	compdiff "github.com/yoanm/go-composer-diff"
 	"testing"
+
+	compdiff "github.com/yoanm/go-composer-diff"
 )
 
 func BenchmarkParseLock(b *testing.B) {

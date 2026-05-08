@@ -5,10 +5,11 @@ import (
 	"os"
 	"testing"
 
-	"github.com/yoanm/go-composer-diff"
 	"github.com/yoanm/go-deps-diff/contract"
 	"github.com/yoanm/go-deps-diff/contract/semver"
 	difftesting "github.com/yoanm/go-deps-diff/testing"
+
+	compdiff "github.com/yoanm/go-composer-diff"
 )
 
 func TestIntegration_SimpleFixtures(t *testing.T) {
@@ -22,14 +23,14 @@ func TestIntegration_SimpleFixtures(t *testing.T) {
 	}{
 		{
 			name:         "Simple",
-			reqFilePath:  "./testdata/composer-simple.json",
-			lockFilePath: "./testdata/composer-simple.lock",
+			reqFilePath:  "./testdata/simple-composer.json",
+			lockFilePath: "./testdata/simple-composer.lock",
 			expected:     integrationSimpleFixturesSimpleCaseExpectation,
 		},
 		{
 			name:         "Complex",
-			reqFilePath:  "./testdata/composer-complex.json",
-			lockFilePath: "./testdata/composer-complex.lock",
+			reqFilePath:  "./testdata/complex-composer.json",
+			lockFilePath: "./testdata/complex-composer.lock",
 			expected:     integrationSimpleFixturesComplexCaseExpectation,
 		},
 	}

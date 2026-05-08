@@ -5,10 +5,11 @@ import (
 	"os"
 	"testing"
 
-	compdiff "github.com/yoanm/go-deps-diff"
 	"github.com/yoanm/go-deps-diff/contract"
 	"github.com/yoanm/go-deps-diff/contract/semver"
 	difftesting "github.com/yoanm/go-deps-diff/testing"
+
+	compdiff "github.com/yoanm/go-composer-diff"
 )
 
 func TestIntegration_Composer_Errors(t *testing.T) {
@@ -134,12 +135,12 @@ func TestIntegration_Composer_Errors(t *testing.T) {
 		t.Run(testCase.name, func(t *testing.T) {
 			t.Parallel()
 
-			_, err := compdiff.ComposerDiff(
-				&compdiff.PkgManagerInput{
+			_, err := compdiff.Diff(
+				&compdiff.Input{
 					Lock:        testCase.previousLockData,
 					Requirement: testCase.previousReqData,
 				},
-				&compdiff.PkgManagerInput{
+				&compdiff.Input{
 					Lock:        testCase.currentLockData,
 					Requirement: testCase.currentReqData,
 				},
@@ -157,40 +158,40 @@ func TestIntegration_Composer_OriginalDataset(t *testing.T) {
 	t.Parallel()
 
 	// Load fixture files
-	previousReq, err := os.ReadFile("./testdata/composer-basic_PREVIOUS.json")
+	previousReq, err := os.ReadFile("./testdata/original_dataset-PREVIOUS-composer.json")
 	if err != nil {
 		t.Errorf("Diff() error while reading previous requirement file = %v", err)
 
 		return
 	}
 
-	currentReq, err := os.ReadFile("./testdata/composer-basic_CURRENT.json")
+	currentReq, err := os.ReadFile("./testdata/original_dataset-CURRENT-composer.json")
 	if err != nil {
 		t.Errorf("Diff() error while reading current requirement file = %v", err)
 
 		return
 	}
 
-	previousLock, err := os.ReadFile("./testdata/composer-basic_PREVIOUS.lock")
+	previousLock, err := os.ReadFile("./testdata/original_dataset-PREVIOUS-composer.lock")
 	if err != nil {
 		t.Errorf("Diff() error while reading previous lock file = %v", err)
 
 		return
 	}
 
-	currentLock, err := os.ReadFile("./testdata/composer-basic_CURRENT.lock")
+	currentLock, err := os.ReadFile("./testdata/original_dataset-CURRENT-composer.lock")
 	if err != nil {
 		t.Errorf("Diff() error while reading current lock file = %v", err)
 
 		return
 	}
 
-	out, err := compdiff.ComposerDiff(
-		&compdiff.PkgManagerInput{
+	out, err := compdiff.Diff(
+		&compdiff.Input{
 			Lock:        previousLock,
 			Requirement: previousReq,
 		},
-		&compdiff.PkgManagerInput{
+		&compdiff.Input{
 			Lock:        currentLock,
 			Requirement: currentReq,
 		},

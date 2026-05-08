@@ -3,11 +3,13 @@ package compdiff_test
 import (
 	"errors"
 	"fmt"
-	compdiff "github.com/yoanm/go-composer-diff"
 	"testing"
 
 	"github.com/yoanm/go-deps-diff/contract"
 	"github.com/yoanm/go-deps-diff/contract/semver"
+	difftesting "github.com/yoanm/go-deps-diff/testing"
+
+	compdiff "github.com/yoanm/go-composer-diff"
 )
 
 func TestBuildMapFromBytes_Error(t *testing.T) {

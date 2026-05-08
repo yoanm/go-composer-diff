@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	compdiff "github.com/yoanm/go-deps-diff"
+	compdiff "github.com/yoanm/go-composer-diff"
 )
 
 func BenchmarkDiff_ComposerDiff(b *testing.B) {
@@ -18,12 +18,12 @@ func BenchmarkDiff_ComposerDiff(b *testing.B) {
 
 	b.RunParallel(func(pb *testing.PB) {
 		for pb.Next() { // pb.Next() returns false when the benchmark should stop
-			_, err := compdiff.ComposerDiff(
-				&compdiff.PkgManagerInput{
+			_, err := compdiff.Diff(
+				&compdiff.Input{
 					Lock:        lockPrevious,
 					Requirement: reqPrevious,
 				},
-				&compdiff.PkgManagerInput{
+				&compdiff.Input{
 					Lock:        lockCurrent,
 					Requirement: reqCurrent,
 				},
