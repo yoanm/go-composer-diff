@@ -2,7 +2,7 @@
 
 ## Functions
 
-### func [BuildMap](/package_map.go#L24)
+### func [BuildMap](/package_map.go#L28)
 
 `func BuildMap(reqData *ReqFile, lockData *LockFile) (contract.PackageMap, error)`
 
@@ -62,23 +62,23 @@ BuildMap creates an efficient lookup map for composer packages.
 
 `type Input struct { ... }`
 
-### type [InvalidFormatError](/parser.go#L57)
+### type [InvalidFormatError](/parser.go#L55)
 
 `type InvalidFormatError struct { ... }`
 
 InvalidFormatError indicates the JSON is valid but doesn't match expected structure.
 
-#### func (InvalidFormatError) [Error](/parser.go#L61)
+#### func (InvalidFormatError) [Error](/parser.go#L59)
 
 `func (e InvalidFormatError) Error() string`
 
-### type [InvalidJSONError](/parser.go#L48)
+### type [InvalidJSONError](/parser.go#L46)
 
 `type InvalidJSONError struct { ... }`
 
 InvalidJSONError indicates the input JSON is malformed.
 
-#### func (InvalidJSONError) [Error](/parser.go#L52)
+#### func (InvalidJSONError) [Error](/parser.go#L50)
 
 `func (e InvalidJSONError) Error() string`
 
@@ -106,7 +106,7 @@ Package represents a single package entry in composer.lock.
 
 ReqFile represents the structure of a composer.json file (composer requirement).
 
-#### func [ParseReq](/parser.go#L28)
+#### func [ParseReq](/parser.go#L27)
 
 `func ParseReq(data []byte) (*ReqFile, error)`
 

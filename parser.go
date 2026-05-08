@@ -12,8 +12,7 @@ func ParseLock(data []byte) (*LockFile, error) {
 
 	var lock LockFile
 
-	err := json.Unmarshal(data, &lock)
-	if err != nil {
+	if err := json.Unmarshal(data, &lock); err != nil {
 		return nil, &InvalidJSONError{err: err}
 	}
 
@@ -32,8 +31,7 @@ func ParseReq(data []byte) (*ReqFile, error) {
 
 	var result ReqFile
 
-	err := json.Unmarshal(data, &result)
-	if err != nil {
+	if err := json.Unmarshal(data, &result); err != nil {
 		return nil, &InvalidJSONError{err: err}
 	}
 

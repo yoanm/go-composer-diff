@@ -77,37 +77,32 @@ func parsePkgVersion(pkg *Package) contract.PkgVersion {
 // getPkgRef extracts the commit hash from a package
 // Prefers dist.reference over source.reference.
 func getPkgRef(pkg *Package) string {
-	if pkg.Dist != nil && pkg.Dist.Reference != "" {
+	switch {
+	case pkg.Dist != nil && pkg.Dist.Reference != "":
 		return pkg.Dist.Reference
-	}
-
-	if pkg.Source != nil && pkg.Source.Reference != "" {
+	case pkg.Source != nil && pkg.Source.Reference != "":
 		return pkg.Source.Reference
+	default:
+		return ""
 	}
-
-	return ""
 }
 
 // getPkgLink extracts the best available link from a package
 // Priority: wiki -> docs -> source -> homepage.
 func getPkgLink(pkg *Package) string {
-	if pkg.Support != nil {
-		if pkg.Support.Wiki != "" {
+	switch {
+	case pkg.Support != nil:
+		switch {
+		case pkg.Support.Wiki != "":
 			return pkg.Support.Wiki
-		}
-
-		if pkg.Support.Docs != "" {
+		case pkg.Support.Docs != "":
 			return pkg.Support.Docs
-		}
-
-		if pkg.Support.Source != "" {
+		case pkg.Support.Source != "":
 			return pkg.Support.Source
 		}
-	}
-
-	if pkg.Homepage != "" {
+	case pkg.Homepage != "":
 		return pkg.Homepage
+	default:
+		return ""
 	}
-
-	return ""
 }

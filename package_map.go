@@ -7,13 +7,17 @@ import (
 )
 
 func BuildMapFromBytes(reqContent, lockContent []byte) (contract.PackageMap, error) {
-	reqData, err := ParseReq(reqContent)
-	if err != nil {
+	var (
+		reqData  *ReqFile
+		lockData *LockFile
+		err      error
+	)
+
+	if reqData, err = ParseReq(reqContent); err != nil {
 		return nil, fmt.Errorf("parsing requirement file content: %w", err)
 	}
 
-	lockData, err := ParseLock(lockContent)
-	if err != nil {
+	if lockData, err = ParseLock(lockContent); err != nil {
 		return nil, fmt.Errorf("parsing lock file content: %w", err)
 	}
 
