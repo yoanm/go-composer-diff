@@ -2,7 +2,6 @@ package compdiff_test
 
 import (
 	"fmt"
-	"os"
 	"testing"
 
 	"github.com/yoanm/go-deps-diff/contract"
@@ -12,7 +11,7 @@ import (
 	compdiff "github.com/yoanm/go-composer-diff"
 )
 
-func TestIntegration_Composer_Errors(t *testing.T) {
+func TestIntegration_Diff_Errors(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {
@@ -154,60 +153,31 @@ func TestIntegration_Composer_Errors(t *testing.T) {
 	}
 }
 
-func TestIntegration_Composer_OriginalDataset(t *testing.T) {
+func TestIntegration_Diff_OriginalDataset(t *testing.T) {
 	t.Parallel()
 
-	// Load fixture files
-	previousReq, err := os.ReadFile("./testdata/original_dataset-PREVIOUS-composer.json")
-	if err != nil {
-		t.Errorf("Diff() error while reading previous requirement file = %v", err)
-
-		return
-	}
-
-	currentReq, err := os.ReadFile("./testdata/original_dataset-CURRENT-composer.json")
-	if err != nil {
-		t.Errorf("Diff() error while reading current requirement file = %v", err)
-
-		return
-	}
-
-	previousLock, err := os.ReadFile("./testdata/original_dataset-PREVIOUS-composer.lock")
-	if err != nil {
-		t.Errorf("Diff() error while reading previous lock file = %v", err)
-
-		return
-	}
-
-	currentLock, err := os.ReadFile("./testdata/original_dataset-CURRENT-composer.lock")
-	if err != nil {
-		t.Errorf("Diff() error while reading current lock file = %v", err)
-
-		return
-	}
-
-	out, err := compdiff.Diff(
-		&compdiff.Input{
-			Lock:        previousLock,
-			Requirement: previousReq,
+	out, err := compdiff.FileDiff(
+		&compdiff.FileInput{
+			Lock:        "./testdata/original_dataset-PREVIOUS-composer.lock",
+			Requirement: "./testdata/original_dataset-PREVIOUS-composer.json",
 		},
-		&compdiff.Input{
-			Lock:        currentLock,
-			Requirement: currentReq,
+		&compdiff.FileInput{
+			Lock:        "./testdata/original_dataset-CURRENT-composer.lock",
+			Requirement: "./testdata/original_dataset-CURRENT-composer.json",
 		},
 	)
 	if err != nil {
-		t.Errorf("Diff() error = %v", err)
+		t.Errorf("FileDiff() error = %v", err)
 
 		return
 	}
 
-	for _, err := range difftesting.ValidateChanges(out, integrationComposerOriginalDatasetExpectation) {
+	for _, err := range difftesting.ValidateChanges(out, integrationOriginalDatasetExpectation) {
 		t.Error(err)
 	}
 }
 
-var integrationComposerOriginalDatasetExpectation = contract.DiffMap{
+var integrationOriginalDatasetExpectation = contract.DiffMap{
 	"sebastian/diff": { // sebastian/diff	4.0.4 	↘️‼️️ 	3.0.3
 		Package: &difftesting.TestPkgWrapper{
 			Name:               "sebastian/diff",

@@ -8,7 +8,7 @@ import (
 	compdiff "github.com/yoanm/go-composer-diff"
 )
 
-func BenchmarkBuildMapFromBytes(b *testing.B) {
+func Benchmark_BuildMapFromBytes(b *testing.B) {
 	// Load fixture files
 	reqData, err := os.ReadFile("./testdata/composer-complex.json")
 	if err != nil {

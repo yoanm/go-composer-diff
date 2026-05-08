@@ -8,7 +8,7 @@ import (
 	compdiff "github.com/yoanm/go-composer-diff"
 )
 
-func BenchmarkDiff_ComposerDiff(b *testing.B) {
+func Benchmark_Diff(b *testing.B) {
 	lockPrevious := generateComposerLockFile(1000)
 	lockCurrent := generateComposerLockFile(1000)
 	reqPrevious := generateComposerReqFile(1000)

@@ -8,7 +8,21 @@ import (
 	compdiff "github.com/yoanm/go-composer-diff"
 )
 
-func BenchmarkParseLock(b *testing.B) {
+func Benchmark_ParseReq(b *testing.B) {
+	data := generateReqFile(1000)
+
+	b.ResetTimer()
+
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() { // pb.Next() returns false when the benchmark should stop
+			if _, err := compdiff.ParseReq(data); err != nil {
+				b.Fatalf("ParseReq failed: %v", err)
+			}
+		}
+	})
+}
+
+func Benchmark_ParseLock(b *testing.B) {
 	data := generateLockFile(1000)
 
 	b.ResetTimer()
@@ -20,6 +34,31 @@ func BenchmarkParseLock(b *testing.B) {
 			}
 		}
 	})
+}
+
+func generateReqFile(count int) []byte {
+	type reqStruct struct {
+		Require    map[string]string `json:"require"`
+		RequireDev map[string]string `json:"require-dev"`
+	}
+
+	reqObject := reqStruct{
+		Require:    map[string]string{},
+		RequireDev: map[string]string{},
+	}
+
+	for cnt := range count {
+		key, value := fmt.Sprintf("vendor/package-%d", cnt), fmt.Sprintf("^%d.%d", cnt%10, cnt%5)
+		if cnt%2 == 0 {
+			reqObject.Require[key] = value
+		} else {
+			reqObject.RequireDev[key] = value
+		}
+	}
+
+	data, _ := json.Marshal(reqObject) //nolint:errchkjson // Not the purpose of the test
+
+	return data
 }
 
 func generateLockFile(count int) []byte {
@@ -55,45 +94,6 @@ func generateLockFile(count int) []byte {
 	}
 
 	data, _ := json.Marshal(lockObject) //nolint:errchkjson // Not the purpose of the test
-
-	return data
-}
-
-func BenchmarkParseReq(b *testing.B) {
-	data := generateReqFile(1000)
-
-	b.ResetTimer()
-
-	b.RunParallel(func(pb *testing.PB) {
-		for pb.Next() { // pb.Next() returns false when the benchmark should stop
-			if _, err := compdiff.ParseReq(data); err != nil {
-				b.Fatalf("ParseReq failed: %v", err)
-			}
-		}
-	})
-}
-
-func generateReqFile(count int) []byte {
-	type reqStruct struct {
-		Require    map[string]string `json:"require"`
-		RequireDev map[string]string `json:"require-dev"`
-	}
-
-	reqObject := reqStruct{
-		Require:    map[string]string{},
-		RequireDev: map[string]string{},
-	}
-
-	for cnt := range count {
-		key, value := fmt.Sprintf("vendor/package-%d", cnt), fmt.Sprintf("^%d.%d", cnt%10, cnt%5)
-		if cnt%2 == 0 {
-			reqObject.Require[key] = value
-		} else {
-			reqObject.RequireDev[key] = value
-		}
-	}
-
-	data, _ := json.Marshal(reqObject) //nolint:errchkjson // Not the purpose of the test
 
 	return data
 }

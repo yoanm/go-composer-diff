@@ -195,13 +195,6 @@ linters:
           - lll
           - gosec
         path: _test\.go
-      - linters:
-          - err113
-          - cyclop
-          - gochecknoglobals
-          - lll
-          - gosec
-        path: diff_testing/.*
     paths:
       - third_party$
       - builtin$

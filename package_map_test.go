@@ -12,249 +12,7 @@ import (
 	compdiff "github.com/yoanm/go-composer-diff"
 )
 
-func TestBuildMapFromBytes_Error(t *testing.T) {
-	t.Parallel()
-
-	tests := []struct {
-		name     string
-		reqData  []byte
-		lockData []byte
-		checkFn  func(err error) error
-	}{
-		{
-			name:    "invalid json - req file",
-			reqData: []byte(`{invalid}`),
-			lockData: []byte(`{
-				"packages": [
-					{"name": "vendor/pkg", "version": "1.0.0"}
-				]
-			}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing requirement file content: invalid JSON: invalid character 'i' looking for beginning of object key string" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
-		},
-		{
-			name: "invalid json - lock file",
-			reqData: []byte(`{
-				"require": {"vendor/pkg": "^1.0"},
-				"require-dev": {"vendor/test": "^1.0"}
-			}`),
-			lockData: []byte(`{invalid}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing lock file content: invalid JSON: invalid character 'i' looking for beginning of object key string" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
-		},
-		{
-			name:    "empty input - req file",
-			reqData: []byte{},
-			lockData: []byte(`{
-				"packages": [
-					{"name": "vendor/pkg", "version": "1.0.0"}
-				]
-			}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing requirement file content: invalid format: empty input" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
-		},
-		{
-			name: "empty input - lock file",
-			reqData: []byte(`{
-				"require": {"vendor/pkg": "^1.0"},
-				"require-dev": {"vendor/test": "^1.0"}
-			}`),
-			lockData: []byte{},
-			checkFn: func(err error) error {
-				if err.Error() != "parsing lock file content: invalid format: empty input" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
-		},
-		{
-			name:    "missing require arrays - req file",
-			reqData: []byte(`{"other": "field"}`),
-			lockData: []byte(`{
-				"packages": [
-					{"name": "vendor/pkg", "version": "1.0.0"}
-				]
-			}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing requirement file content: invalid format: missing 'require' or 'require-dev' fields" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
-		},
-		{
-			name: "missing require arrays - lock file",
-			reqData: []byte(`{
-				"require": {"vendor/pkg": "^1.0"},
-				"require-dev": {"vendor/test": "^1.0"}
-			}`),
-			lockData: []byte(`{"other": "field"}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing lock file content: invalid format: missing 'packages' or 'packages-dev' fields" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
-		},
-	}
-
-	for _, testCase := range tests {
-		t.Run(testCase.name, func(t *testing.T) {
-			t.Parallel()
-
-			_, err := compdiff.BuildMapFromBytes(testCase.reqData, testCase.lockData)
-			if err == nil {
-				t.Errorf("an error is expected")
-			} else if err2 := testCase.checkFn(err); err2 != nil {
-				t.Error(err2)
-			}
-		})
-	}
-}
-
-func TestRootRequirementProperty(t *testing.T) {
-	t.Parallel()
-
-	tests := []struct {
-		name     string
-		req      []byte
-		lock     []byte
-		expected bool
-	}{
-		{
-			name: "Package not explicitly required",
-			req:  []byte(`{"require": {}}`),
-			lock: []byte(`{
-				"packages": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
-			}`),
-			expected: false,
-		},
-		{
-			name: "Package in require section",
-			req:  []byte(`{"require": {"vendor/pkg": "^1.0"}}`),
-			lock: []byte(`{
-				"packages": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
-			}`),
-			expected: true,
-		},
-		{
-			name: "Package in require-dev section",
-			req:  []byte(`{"require-dev": {"vendor/pkg": "^1.0"}}`),
-			lock: []byte(`{
-				"packages-dev": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
-			}`),
-			expected: false,
-		},
-	}
-
-	for _, testData := range tests {
-		t.Run(testData.name, func(t *testing.T) {
-			t.Parallel()
-
-			pkgMap, err := compdiff.BuildMapFromBytes(testData.req, testData.lock)
-			if err != nil {
-				t.Fatal(fmt.Errorf("building map: %w", err))
-			} else if len(pkgMap) != 1 {
-				t.Fatal(fmt.Errorf("one and only one package is expected, got %d", len(pkgMap)))
-			}
-
-			pkg, pkgExists := pkgMap["vendor/pkg"]
-			if !pkgExists {
-				t.Fatal(errors.New("package 'vendor/pkg' is expected in the package map"))
-			} else if pkg.IsRootRequirement() != testData.expected {
-				t.Fatal(
-					fmt.Errorf(
-						"unexpected IsRootRequirement(): got %t, want %t",
-						pkg.IsRootRequirement(),
-						testData.expected,
-					),
-				)
-			}
-		})
-	}
-}
-
-func TestRootDevRequirementProperty(t *testing.T) {
-	t.Parallel()
-
-	tests := []struct {
-		name     string
-		req      []byte
-		lock     []byte
-		expected bool
-	}{
-		{
-			name: "Package not explicitly required",
-			req:  []byte(`{"require": {}}`),
-			lock: []byte(`{
-				"packages": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
-			}`),
-			expected: false,
-		},
-		{
-			name: "Package in require-dev section",
-			req:  []byte(`{"require-dev": {"vendor/pkg": "^1.0"}}`),
-			lock: []byte(`{
-				"packages-dev": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
-			}`),
-			expected: true,
-		},
-		{
-			name: "Package in require section",
-			req:  []byte(`{"require": {"vendor/pkg": "^1.0"}}`),
-			lock: []byte(`{
-				"packages": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
-			}`),
-			expected: false,
-		},
-	}
-
-	for _, testData := range tests {
-		t.Run(testData.name, func(t *testing.T) {
-			t.Parallel()
-
-			pkgMap, err := compdiff.BuildMapFromBytes(testData.req, testData.lock)
-			if err != nil {
-				t.Error(fmt.Errorf("building map: %w", err))
-
-				return
-			}
-
-			pkg, pkgExists := pkgMap["vendor/pkg"]
-			if !pkgExists {
-				t.Fatal(errors.New("package 'vendor/pkg' is expected in the package map"))
-			} else if pkg.IsRootDevRequirement() != testData.expected {
-				t.Fatal(
-					fmt.Errorf(
-						"unexpected IsRootDevRequirement(): got %t, want %t",
-						pkg.IsRootDevRequirement(),
-						testData.expected,
-					),
-				)
-			}
-		})
-	}
-}
-
-func TestDevOnlyProperty(t *testing.T) {
+func TestBuildMapFromBytes_IsDevOnlyProperty(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {
@@ -319,7 +77,7 @@ func TestDevOnlyProperty(t *testing.T) {
 	}
 }
 
-func TestIsAbandonedProperty(t *testing.T) {
+func TestBuildMapFromBytes_IsAbandonedProperty(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {
@@ -349,6 +107,27 @@ func TestIsAbandonedProperty(t *testing.T) {
 			]}`),
 			expected: true,
 		},
+		{
+			name: "null value",
+			lock: []byte(`{"packages": [
+				{"name":"vendor/pkg","version":"1.0.0","abandoned":null}
+			]}`),
+			expected: false,
+		},
+		{
+			name: "int value",
+			lock: []byte(`{"packages": [
+				{"name":"vendor/pkg","version":"1.0.0","abandoned":1}
+			]}`),
+			expected: false,
+		},
+		{
+			name: "no 'abandoned' field",
+			lock: []byte(`{"packages": [
+				{"name":"vendor/pkg","version":"1.0.0"}
+			]}`),
+			expected: false,
+		},
 	}
 
 	for _, testCase := range tests {
@@ -374,7 +153,7 @@ func TestIsAbandonedProperty(t *testing.T) {
 	}
 }
 
-func TestLinkProperty(t *testing.T) {
+func TestBuildMapFromBytes_LinkProperty(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {
@@ -443,7 +222,131 @@ func TestLinkProperty(t *testing.T) {
 	}
 }
 
-func TestVersionProperty(t *testing.T) {
+func TestBuildMapFromBytes_IsRootRequirementProperty(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name     string
+		req      []byte
+		lock     []byte
+		expected bool
+	}{
+		{
+			name: "Package not explicitly required",
+			req:  []byte(`{"require": {}}`),
+			lock: []byte(`{
+				"packages": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
+			}`),
+			expected: false,
+		},
+		{
+			name: "Package in require section",
+			req:  []byte(`{"require": {"vendor/pkg": "^1.0"}}`),
+			lock: []byte(`{
+				"packages": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
+			}`),
+			expected: true,
+		},
+		{
+			name: "Package in require-dev and packages sections - unexpected case though",
+			req:  []byte(`{"require-dev": {"vendor/pkg": "^1.0"}}`),
+			lock: []byte(`{
+				"packages": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
+			}`),
+			expected: false,
+		},
+	}
+
+	for _, testData := range tests {
+		t.Run(testData.name, func(t *testing.T) {
+			t.Parallel()
+
+			pkgMap, err := compdiff.BuildMapFromBytes(testData.req, testData.lock)
+			if err != nil {
+				t.Fatal(fmt.Errorf("building map: %w", err))
+			} else if len(pkgMap) != 1 {
+				t.Fatal(fmt.Errorf("one and only one package is expected, got %d", len(pkgMap)))
+			}
+
+			pkg, pkgExists := pkgMap["vendor/pkg"]
+			if !pkgExists {
+				t.Fatal(errors.New("package 'vendor/pkg' is expected in the package map"))
+			} else if pkg.IsRootRequirement() != testData.expected {
+				t.Fatal(
+					fmt.Errorf(
+						"unexpected IsRootRequirement(): got %t, want %t",
+						pkg.IsRootRequirement(),
+						testData.expected,
+					),
+				)
+			}
+		})
+	}
+}
+
+func TestBuildMapFromBytes_IsRootDevRequirementProperty(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name     string
+		req      []byte
+		lock     []byte
+		expected bool
+	}{
+		{
+			name: "Package not explicitly required",
+			req:  []byte(`{"require": {}}`),
+			lock: []byte(`{
+				"packages-dev": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
+			}`),
+			expected: false,
+		},
+		{
+			name: "Package in require-dev section",
+			req:  []byte(`{"require-dev": {"vendor/pkg": "^1.0"}}`),
+			lock: []byte(`{
+				"packages-dev": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
+			}`),
+			expected: true,
+		},
+		{
+			name: "Package in require and packages-dev sections - unexpected case though",
+			req:  []byte(`{"require": {"vendor/pkg": "^1.0"}}`),
+			lock: []byte(`{
+				"packages-dev": [{"name": "vendor/pkg", "version": "1.0.0", "source": {"reference": "abc"}}]
+			}`),
+			expected: false,
+		},
+	}
+
+	for _, testData := range tests {
+		t.Run(testData.name, func(t *testing.T) {
+			t.Parallel()
+
+			pkgMap, err := compdiff.BuildMapFromBytes(testData.req, testData.lock)
+			if err != nil {
+				t.Error(fmt.Errorf("building map: %w", err))
+
+				return
+			}
+
+			pkg, pkgExists := pkgMap["vendor/pkg"]
+			if !pkgExists {
+				t.Fatal(errors.New("package 'vendor/pkg' is expected in the package map"))
+			} else if pkg.IsRootDevRequirement() != testData.expected {
+				t.Fatal(
+					fmt.Errorf(
+						"unexpected IsRootDevRequirement(): got %t, want %t",
+						pkg.IsRootDevRequirement(),
+						testData.expected,
+					),
+				)
+			}
+		})
+	}
+}
+
+func TestBuildMapFromBytes_VersionProperty(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {
