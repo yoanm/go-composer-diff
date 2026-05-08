@@ -5,7 +5,7 @@ import (
 	"log/slog"
 
 	"github.com/yoanm/go-deps-diff/contract"
-	"github.com/yoanm/go-deps-diff/contract/semver"
+	"github.com/yoanm/go-deps-diff/semver"
 )
 
 func createWrapper(pkg *Package, reqData *ReqFile, isDevOnly bool) *ComposerPackageWrapper {
@@ -46,7 +46,7 @@ const shortRefLength = 7
 // parsePkgVersion parses a version string into a PkgVersionOld.
 func parsePkgVersion(pkg *Package) contract.PkgVersion {
 	var (
-		sVersion *semver.Version
+		sVersion *contract.Semver
 		err      error
 	)
 

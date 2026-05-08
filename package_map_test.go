@@ -6,10 +6,10 @@ import (
 	"testing"
 
 	"github.com/yoanm/go-deps-diff/contract"
-	"github.com/yoanm/go-deps-diff/contract/semver"
-	difftesting "github.com/yoanm/go-deps-diff/testing"
 
 	compdiff "github.com/yoanm/go-composer-diff"
+
+	difftesting "github.com/yoanm/go-deps-diff/testing"
 )
 
 func TestBuildMapFromBytes_IsDevOnlyProperty(t *testing.T) {
@@ -359,14 +359,14 @@ func TestBuildMapFromBytes_VersionProperty(t *testing.T) {
 			lock: []byte(`{"packages": [{"name": "vendor/pkg", "version": "1.2.3",
 				"dist": {"reference": "abc123"}
 			}]}`),
-			expected: contract.PkgVersion{Raw: "1.2.3", Label: "1.2.3", Semver: &semver.Version{Major: 1, Minor: 2, Patch: 3, Extra: ""}},
+			expected: contract.PkgVersion{Raw: "1.2.3", Label: "1.2.3", Semver: &contract.Semver{Major: 1, Minor: 2, Patch: 3, Extra: ""}},
 		},
 		{
 			name: "Semver version with extra",
 			lock: []byte(`{"packages": [{"name": "vendor/pkg", "version": "1.2.3+beta",
 				"dist": {"reference": "abc123"}
 			}]}`),
-			expected: contract.PkgVersion{Raw: "1.2.3+beta", Label: "1.2.3+beta", Semver: &semver.Version{Major: 1, Minor: 2, Patch: 3, Extra: "+beta"}},
+			expected: contract.PkgVersion{Raw: "1.2.3+beta", Label: "1.2.3+beta", Semver: &contract.Semver{Major: 1, Minor: 2, Patch: 3, Extra: "+beta"}},
 		},
 		{
 			name: "not semver - dist reference",

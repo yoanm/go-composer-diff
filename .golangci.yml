@@ -212,6 +212,7 @@ formatters:
         - default
         - prefix(github.com/yoanm)
         - prefix(github.com/yoanm/go-composer-diff)
+        - prefix(github.com/yoanm/go-deps-diff/testing)
         - blank
         - dot
       custom-order: true
