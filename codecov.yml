@@ -10,3 +10,7 @@ comment:
 
 github_checks:
     annotations: true
+
+ignore:
+  - "DOC.md" # Auto-generated doc
+  - ".tools/**" # Used by CI (should be eventually exported somewhere else)
