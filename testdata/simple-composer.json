@@ -1,0 +1,9 @@
+{
+  "require": {
+    "vendor/package-a": "^1.0",
+    "vendor/package-b": ">=2.0"
+  },
+  "require-dev": {
+    "vendor/package-dev-a": "^1.0"
+  }
+}

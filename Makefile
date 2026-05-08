@@ -7,14 +7,6 @@ else
     SED_INPLACE_OPTION=-i
 endif
 
-define buildDocForSubPackage
-	echo "Generate doc for $(1) sub-package ..."; \
-	cd $(1) > /dev/null; \
-	goreadme -constants -variabless -types -methods -functions -factories -recursive > README.md; \
-	sed ${SED_INPLACE_OPTION} -E "s/]\((\/.+)\.go/](.\1.go/g" README.md; \
-	cd - > /dev/null;
-endef
-
 .DEFAULT_GOAL = default
 
 .PHONY: default
@@ -51,10 +43,6 @@ build-doc: ## 🗜️  Build packages doc
 build-doc:
 	echo "Generate doc for main package ..."
 	goreadme -constants -variabless -types -methods -functions -factories -recursive > DOC.md
-	# Generate doc for sub-packages
-	find * -maxdepth 1 -type d \( -path "shared" -o -path "diff_testing" -o -path "managers" -o -path "managers/composer" -o -path "summary" -o -path "summary/markdown" \) | while IFS= read -r d; do \
-		$(call buildDocForSubPackage,$$d) \
-	done
 
 ##—— 🐹 Golang —————————————————————————————————————————————
 .PHONY: build

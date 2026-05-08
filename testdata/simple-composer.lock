@@ -1,0 +1,77 @@
+{
+  "packages": [
+    {
+      "name": "vendor/package-a",
+      "version": "1.2.3",
+      "source": {
+        "reference": "abc123def456"
+      },
+      "dist": {
+        "reference": "abc123def456"
+      },
+      "support": {
+        "wiki": "https://example.com/wiki/package-a",
+        "docs": "https://example.com/docs/package-a",
+        "source": "https://github.com/vendor/package-a"
+      },
+      "homepage": "https://example.com/package-a",
+      "abandoned": false
+    },
+    {
+      "name": "vendor/package-b",
+      "version": "v2.0.0",
+      "source": {
+        "reference": "def456ghi789"
+      },
+      "dist": {
+        "reference": "def456ghi789"
+      },
+      "support": {
+        "wiki": "https://example.com/wiki/package-b"
+      },
+      "abandoned": false
+    },
+    {
+      "name": "vendor/package-c",
+      "version": "3.5.1",
+      "source": {
+        "reference": "ghi789jkl012"
+      },
+      "dist": {
+        "reference": "ghi789jkl012"
+      },
+      "homepage": "https://example.com/package-c",
+      "abandoned": false
+    }
+  ],
+  "packages-dev": [
+    {
+      "name": "vendor/package-dev-a",
+      "version": "1.0.0",
+      "source": {
+        "reference": "jkl012mno345"
+      },
+      "dist": {
+        "reference": "jkl012mno345"
+      },
+      "support": {
+        "source": "https://github.com/vendor/package-dev-a"
+      },
+      "abandoned": false
+    },
+    {
+      "name": "vendor/package-dev-b",
+      "version": "v1.1.0",
+      "source": {
+        "reference": "jkl012mno346"
+      },
+      "dist": {
+        "reference": "jkl012mno346"
+      },
+      "support": {
+        "source": "https://github.com/vendor/package-dev-b"
+      },
+      "abandoned": false
+    }
+  ]
+}
