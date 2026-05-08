@@ -1,18 +1,18 @@
 package compdiff
 
-// ReqFile represents the structure of a compdiff.json file (composer requirement).
+// ReqFile represents the structure of a composer.json file (composer requirement).
 type ReqFile struct {
 	Require    map[string]string `json:"require,omitempty"`
 	RequireDev map[string]string `json:"require-dev,omitempty"`
 }
 
-// LockFile represents the structure of a compdiff.lock file.
+// LockFile represents the structure of a composer.lock file.
 type LockFile struct {
 	Packages    []Package `json:"packages,omitempty"`
 	PackagesDev []Package `json:"packages-dev,omitempty"`
 }
 
-// Package represents a single package entry in compdiff.lock.
+// Package represents a single package entry in composer.lock.
 type Package struct {
 	Name      string            `json:"name"`
 	Version   string            `json:"version"`

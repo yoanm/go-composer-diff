@@ -2,28 +2,9 @@ package compdiff
 
 import (
 	"encoding/json"
-	"fmt"
 )
 
-// InvalidJSONError indicates the input JSON is malformed.
-type InvalidJSONError struct {
-	err error
-}
-
-func (e InvalidJSONError) Error() string {
-	return fmt.Sprintf("invalid JSON: %v", e.err)
-}
-
-// InvalidFormatError indicates the JSON is valid but doesn't match expected structure.
-type InvalidFormatError struct {
-	message string
-}
-
-func (e InvalidFormatError) Error() string {
-	return "invalid format: " + e.message
-}
-
-// ParseLock parses a compdiff.lock file from JSON bytes.
+// ParseLock parses a composer.lock file from JSON bytes.
 func ParseLock(data []byte) (*LockFile, error) {
 	if len(data) == 0 {
 		return nil, &InvalidFormatError{message: "empty input"}
@@ -43,7 +24,7 @@ func ParseLock(data []byte) (*LockFile, error) {
 	return &lock, nil
 }
 
-// ParseReq parses a compdiff.json (composer requirement) file from JSON bytes.
+// ParseReq parses a composer.json file from JSON bytes.
 func ParseReq(data []byte) (*ReqFile, error) {
 	if len(data) == 0 {
 		return nil, &InvalidFormatError{message: "empty input"}
@@ -61,4 +42,22 @@ func ParseReq(data []byte) (*ReqFile, error) {
 	}
 
 	return &result, nil
+}
+
+// InvalidJSONError indicates the input JSON is malformed.
+type InvalidJSONError struct {
+	err error
+}
+
+func (e InvalidJSONError) Error() string {
+	return "invalid JSON: " + e.err.Error()
+}
+
+// InvalidFormatError indicates the JSON is valid but doesn't match expected structure.
+type InvalidFormatError struct {
+	message string
+}
+
+func (e InvalidFormatError) Error() string {
+	return "invalid format: " + e.message
 }

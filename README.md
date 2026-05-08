@@ -18,13 +18,13 @@ BuildMap creates an efficient lookup map for composer packages.
 
 `type ComposerLock struct { ... }`
 
-ComposerLock represents the structure of a compdiff.lock file.
+ComposerLock represents the structure of a composer.lock file.
 
 #### func [ParseLock](./parser.go#L27)
 
 `func ParseLock(data []byte) (*ComposerLock, error)`
 
-ParseLock parses a compdiff.lock file from JSON bytes.
+ParseLock parses a composer.lock file from JSON bytes.
 
 ### type [ComposerPackageWrapper](./wrapper_types.go#L5)
 
@@ -62,13 +62,13 @@ ParseLock parses a compdiff.lock file from JSON bytes.
 
 `type ComposerReq struct { ... }`
 
-ComposerReq represents the structure of a compdiff.json file (composer requirement).
+ComposerReq represents the structure of a composer.json file (composer requirement).
 
 #### func [ParseReq](./parser.go#L47)
 
 `func ParseReq(data []byte) (*ComposerReq, error)`
 
-ParseReq parses a compdiff.json (composer requirement) file from JSON bytes.
+ParseReq parses a composer.json (composer requirement) file from JSON bytes.
 
 ### type [InvalidFormatError](./parser.go#L18)
 
@@ -94,7 +94,7 @@ InvalidJSONError indicates the input JSON is malformed.
 
 `type Package struct { ... }`
 
-Package represents a single package entry in compdiff.lock.
+Package represents a single package entry in composer.lock.
 
 ### type [Support](./types.go#L32)
 

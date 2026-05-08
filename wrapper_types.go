@@ -12,6 +12,9 @@ type ComposerPackageWrapper struct {
 	isRootDevRequirement bool // true if exists in requirement file "require-dev" section
 }
 
+// Ensure that *ComposerPackageWrapper implements contract.PkgWrapper.
+var _ contract.PkgWrapper = (*ComposerPackageWrapper)(nil)
+
 func (w *ComposerPackageWrapper) GetName() string {
 	return w.name
 }
