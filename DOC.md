@@ -12,7 +12,7 @@ BuildMap creates an efficient lookup map for composer packages.
 
 `func BuildMapFromBytes(reqContent, lockContent []byte) (contract.PackageMap, error)`
 
-### func [Diff](/main.go#L31)
+### func [Diff](/main.go#L32)
 
 `func Diff(previous, current *Input) (contract.DiffMap, error)`
 
