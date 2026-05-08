@@ -6,7 +6,7 @@ go 1.26.2
 
 require (
 	github.com/andreyvit/diff v0.0.0-20170406064948-c7f18ee00883
-	github.com/yoanm/go-deps-diff v0.0.0-20260508091753-ea4492c66374
+	github.com/yoanm/go-deps-diff v0.0.0-20260508113234-ea3e34905922
 )
 
 require github.com/sergi/go-diff v1.4.0 // indirect
