@@ -102,7 +102,7 @@ func getPkgLink(pkg *Package) string {
 		}
 	case pkg.Homepage != "":
 		return pkg.Homepage
-	default:
-		return ""
 	}
+
+	return ""
 }
