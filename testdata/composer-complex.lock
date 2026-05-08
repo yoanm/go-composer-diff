@@ -1,0 +1,2188 @@
+{
+  "packages": [
+    {
+      "name": "vendor/pkg-0001",
+      "version": "2.1.1",
+      "source": {
+        "reference": "e1fa7ae292b69bd55962934c5feeb8f2622f7e0e"
+      },
+      "dist": {
+        "reference": "fc7b7d40aefc097988f3e6a9f77461bb11630775"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0001",
+        "docs": "https://example.com/support-docs/vendor/pkg-0001",
+        "source": "https://example.com/support-source/vendor/pkg-0001"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0001"
+    },
+    {
+      "name": "vendor/pkg-0002",
+      "version": "3.2.0",
+      "source": {
+        "reference": "1be40f04f67d8b27af38bcea1cc472bd2c33e3cc"
+      },
+      "dist": {
+        "reference": "b5e82bc719788d1b86c0ee21a8fb781f4c49b732"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0002",
+        "source": "https://example.com/support-source/vendor/pkg-0002"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0002"
+    },
+    {
+      "name": "vendor/pkg-0003",
+      "version": "4.0.1",
+      "source": {
+        "reference": "77f6abfdf48dc3979ed533de95ff0a2eec2d8601"
+      },
+      "dist": {
+        "reference": "9e6c247e248bf3a63c92eac1611cbb1757bb010c"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0003"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0003"
+    },
+    {
+      "name": "vendor/pkg-0004",
+      "version": "1.1.0",
+      "source": {
+        "reference": "1a697ba71c2e2b556789f51109b2542d148057ca"
+      },
+      "dist": {
+        "reference": "dfad8909e5edfae5795b7c0263b25121bd28bbe3"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0004",
+        "docs": "https://example.com/support-docs/vendor/pkg-0004",
+        "source": "https://example.com/support-source/vendor/pkg-0004"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0004"
+    },
+    {
+      "name": "vendor/pkg-0005",
+      "version": "2.2.1-beta.2",
+      "source": {
+        "reference": "54418c7123f6f434e0f392627208da7124e196c9"
+      },
+      "dist": {
+        "reference": "b0a33e7af4b957c4d773682dc424b4122be9230b"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0005",
+        "source": "https://example.com/support-source/vendor/pkg-0005"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0005"
+    },
+    {
+      "name": "vendor/pkg-0006",
+      "version": "3.0.0",
+      "source": {
+        "reference": "2a099b4e3db2fbc184e04450ce34e18d52af8b29"
+      },
+      "dist": {
+        "reference": "fcc65bc9b69ae97d1b9a2ca6f27e4da214b5a935"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0006"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0006"
+    },
+    {
+      "name": "vendor/pkg-0007",
+      "version": "v3.3.1",
+      "source": {
+        "reference": "f0f9f121cf6c4722155420ce985dc63280325223"
+      },
+      "dist": {
+        "reference": "f379fd6c40c5d11509bff1a93aa9e9a2a0012439"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0007",
+        "docs": "https://example.com/support-docs/vendor/pkg-0007",
+        "source": "https://example.com/support-source/vendor/pkg-0007"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0007"
+    },
+    {
+      "name": "vendor/pkg-0008",
+      "version": "1.2.0",
+      "source": {
+        "reference": "3fbbe197dc158b451d04c7475c690be1a9edcf61"
+      },
+      "dist": {
+        "reference": "46da100efc814916374ebc1ca6ee8163f0cb5ade"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0008",
+        "source": "https://example.com/support-source/vendor/pkg-0008"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0008"
+    },
+    {
+      "name": "vendor/pkg-0009",
+      "version": "2.0.1",
+      "source": {
+        "reference": "01deb62bc56e9ae83f57632535277a5a5c617a7a"
+      },
+      "dist": {
+        "reference": "c257eb28f4ac30fb587f82d48a0fd2dde943db61"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0009"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0009"
+    },
+    {
+      "name": "vendor/pkg-0010",
+      "version": "dev-master",
+      "source": {
+        "reference": "86f73d4043691e3b47499100a436fec5ea150a2a"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0010",
+        "docs": "https://example.com/support-docs/vendor/pkg-0010",
+        "source": "https://example.com/support-source/vendor/pkg-0010"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0010"
+    },
+    {
+      "name": "vendor/pkg-0011",
+      "version": "4.2.1",
+      "source": {
+        "reference": "98bf62290aebc9da0027afe051fca2dc1fc18ff6"
+      },
+      "dist": {
+        "reference": "6012bd2c52eb3c7be51556ad8128d64a2f5ee50e"
+      }
+    },
+    {
+      "name": "vendor/pkg-0012",
+      "version": "1.0.0",
+      "source": {
+        "reference": "475fdcd055744ee594b2101e69f50572db950323"
+      },
+      "dist": {
+        "reference": "455b2d8ec709ef4616db43803f1c89042d8ab75d"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0012",
+        "source": "https://example.com/support-source/vendor/pkg-0012"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0012"
+    },
+    {
+      "name": "vendor/pkg-0013",
+      "version": "2.1.1",
+      "source": {
+        "reference": "96c8f490b2384f21fef65f7fc44403bc97b4fd8d"
+      },
+      "dist": {
+        "reference": "250849cbae819399e2cb7aef4c0a12d032e46eba"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0013"
+      },
+      "abandoned": "https://github.com/example/homepage/vendor/pkg-0013"
+    },
+    {
+      "name": "vendor/pkg-0014",
+      "version": "v5.2.2",
+      "source": {
+        "reference": "1366b69c155c848878d617148e8e0698ba21c944"
+      },
+      "dist": {
+        "reference": "ddc24f78d087970fa590cd0886656eb904b25972"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0014",
+        "docs": "https://example.com/support-docs/vendor/pkg-0014",
+        "source": "https://example.com/support-source/vendor/pkg-0014"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0014"
+    },
+    {
+      "name": "vendor/pkg-0015",
+      "version": "4.0.1-beta.0",
+      "source": {
+        "reference": "0a6b416f103b8acc19909d9f5a2787cff9ba47b9"
+      },
+      "dist": {
+        "reference": "908b6fc63edca25d605d8585db3c290742d66719"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0015",
+        "source": "https://example.com/support-source/vendor/pkg-0015"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0015"
+    },
+    {
+      "name": "vendor/pkg-0016",
+      "version": "1.1.0",
+      "source": {
+        "reference": "be25add08d5d9c8d922537247362b38e08c188c7"
+      },
+      "dist": {
+        "reference": "253d1ff39aee92155eaee814300d10b3295b3caa"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0016"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0016"
+    },
+    {
+      "name": "vendor/pkg-0017",
+      "version": "2.2.1",
+      "source": {
+        "reference": "ed58bd82c2f446475d33cdb1f060a79ac23c51ab"
+      },
+      "dist": {
+        "reference": "a561c8a8471c6d1c3f6af7d2978cb971e81720b9"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0017",
+        "docs": "https://example.com/support-docs/vendor/pkg-0017",
+        "source": "https://example.com/support-source/vendor/pkg-0017"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0017"
+    },
+    {
+      "name": "vendor/pkg-0018",
+      "version": "3.0.0",
+      "source": {
+        "reference": "7fd4ef773f34d957f76fcb76cb15f248c720cf13"
+      },
+      "dist": {
+        "reference": "2c7ebbc695e95678437734f9435f3bdc1da4cbe9"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0018",
+        "source": "https://example.com/support-source/vendor/pkg-0018"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0018"
+    },
+    {
+      "name": "vendor/pkg-0019",
+      "version": "4.1.1",
+      "source": {
+        "reference": "36f04e212348da3434cd2d0edb53bcb7100d3f82"
+      },
+      "dist": {
+        "reference": "c392210e2596d5b4df5fffe5a03fc66319219a43"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0019"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0019"
+    },
+    {
+      "name": "vendor/pkg-0020",
+      "version": "dev-feature/main",
+      "source": {
+        "reference": "00bc61470c4289bc08df47854832ba01e5e8f65c"
+      },
+      "dist": {
+        "reference": "6063a199b704577d953310b513f3011743943b5e"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0020",
+        "docs": "https://example.com/support-docs/vendor/pkg-0020",
+        "source": "https://example.com/support-source/vendor/pkg-0020"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0020"
+    },
+    {
+      "name": "vendor/pkg-0021",
+      "version": "v2.1.0",
+      "source": {
+        "reference": "c854771ccef1d6c016c590729506d66aeee71897"
+      },
+      "dist": {
+        "reference": "0e1d51823d9bbad86d07954dee79f3f86c7b9ef2"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0021",
+        "source": "https://example.com/support-source/vendor/pkg-0021"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0021"
+    },
+    {
+      "name": "vendor/pkg-0022",
+      "version": "3.1.0",
+      "source": {
+        "reference": "5a0bf2139482ed9ef5e3eaea5fac5174d2ef3e09"
+      },
+      "dist": {
+        "reference": "9d943441a376b49bb9ef489e5638959d85c294b7"
+      }
+    },
+    {
+      "name": "vendor/pkg-0023",
+      "version": "4.2.1",
+      "source": {
+        "reference": "9358a05366711653922b3623a3bce1c19a03a59f"
+      },
+      "dist": {
+        "reference": "cdddaf0102a013e07071e24e433949311c6025d5"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0023"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0023"
+    },
+    {
+      "name": "vendor/pkg-0024",
+      "version": "1.0.0",
+      "source": {
+        "reference": "1020172d88c55b053bad4c52622746889e67b58b"
+      },
+      "dist": {
+        "reference": "9942c887d1043040f2bbc2374addc12de568a938"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0024",
+        "docs": "https://example.com/support-docs/vendor/pkg-0024",
+        "source": "https://example.com/support-source/vendor/pkg-0024"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0024"
+    },
+    {
+      "name": "vendor/pkg-0025",
+      "version": "2.1.1-beta.1",
+      "source": {
+        "reference": "d0264856dde2603bfd72671b7513f073334daee8"
+      },
+      "dist": {
+        "reference": "e4748275a4365dc53a114b00b0493f970bab36c4"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0025",
+        "source": "https://example.com/support-source/vendor/pkg-0025"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0025"
+    },
+    {
+      "name": "vendor/pkg-0026",
+      "version": "3.2.0",
+      "source": {
+        "reference": "924fe6f44d4e8ae849d0d3caacd01e4973b23c52"
+      },
+      "dist": {
+        "reference": "0771f0df1123d55e8e00a407262306163cadbdfd"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0026"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0026",
+      "abandoned": "https://packagist.org/packages/vendor-pkg-0026"
+    },
+    {
+      "name": "vendor/pkg-0027",
+      "version": "4.0.1",
+      "source": {
+        "reference": "74b2e14d8a9550069c471a6efb30287ba719743a"
+      },
+      "dist": {
+        "reference": "9508a24616d0567f83a61a17fe6cb5b4eb2e937f"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0027",
+        "docs": "https://example.com/support-docs/vendor/pkg-0027",
+        "source": "https://example.com/support-source/vendor/pkg-0027"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0027"
+    },
+    {
+      "name": "vendor/pkg-0028",
+      "version": "v4.0.1",
+      "source": {
+        "reference": "4b2094f562cf2502233e28bc60e9538baa4de6a6"
+      },
+      "dist": {
+        "reference": "79b25c5683556eec8c8d963a2619163a85cb3c81"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0028",
+        "source": "https://example.com/support-source/vendor/pkg-0028"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0028"
+    },
+    {
+      "name": "vendor/pkg-0029",
+      "version": "2.2.1",
+      "source": {
+        "reference": "a81698f79e96a93bac47566a152fc77d7d300873"
+      },
+      "dist": {
+        "reference": "9a43b358c5ee5bfdf8a79e844867cdd9f5526122"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0029"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0029"
+    },
+    {
+      "name": "vendor/pkg-0030",
+      "version": "2.9.x-dev",
+      "source": {
+        "reference": "df4d98ce0604b76b5fab93c44829c628e739ed91"
+      },
+      "dist": {
+        "reference": "b8a56915c984281cdd1dc902cacbbaa0c7c81c36"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0030",
+        "docs": "https://example.com/support-docs/vendor/pkg-0030",
+        "source": "https://example.com/support-source/vendor/pkg-0030"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0030"
+    },
+    {
+      "name": "vendor/pkg-0031",
+      "version": "4.1.1",
+      "source": {
+        "reference": "2f914d2901a8df37f99c3d9b4d7711684084811a"
+      },
+      "dist": {
+        "reference": "3b31d40c928f97477192fc0113bc81774ee275cb"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0031",
+        "source": "https://example.com/support-source/vendor/pkg-0031"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0031"
+    },
+    {
+      "name": "vendor/pkg-0032",
+      "version": "1.2.0",
+      "source": {
+        "reference": "cc38dd77e8f4a946b0d8846cbb5d31826ae812d1"
+      },
+      "dist": {
+        "reference": "a06e0adc5be4341eb9affe50ff4e0e87e765f085"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0032"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0032"
+    },
+    {
+      "name": "vendor/pkg-0033",
+      "version": "2.0.1",
+      "source": {
+        "reference": "4f32b397181c4c17b33b28e740500c1c5ffa2668"
+      },
+      "dist": {
+        "reference": "080187d7bfb096b4ed937d29b7f393f0469e79a3"
+      }
+    },
+    {
+      "name": "vendor/pkg-0034",
+      "version": "3.1.0",
+      "source": {
+        "reference": "cdafaf4a5eda6e765c9f7d3883e3c13a97c4f67b"
+      },
+      "dist": {
+        "reference": "6891c0a7e593ffd896a2a8d8deae80fc1fa2d3f1"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0034",
+        "docs": "https://example.com/support-docs/vendor/pkg-0034",
+        "source": "https://example.com/support-source/vendor/pkg-0034"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0034"
+    },
+    {
+      "name": "vendor/pkg-0035",
+      "version": "v1.3.2",
+      "source": {
+        "reference": "7253ba26979fee37694b3613e4b143c2be3bca82"
+      },
+      "dist": {
+        "reference": "62c0d94b037bdea5cd221faff74d030c5c8b60bf"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0035",
+        "source": "https://example.com/support-source/vendor/pkg-0035"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0035"
+    },
+    {
+      "name": "vendor/pkg-0036",
+      "version": "1.0.0",
+      "source": {
+        "reference": "71437c2e4f98a455a32642bc1f08c2f4d80d249e"
+      },
+      "dist": {
+        "reference": "b3b75cdd9223846da4597f7624a010b4252b07df"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0036"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0036"
+    },
+    {
+      "name": "vendor/pkg-0037",
+      "version": "2.1.1",
+      "source": {
+        "reference": "6c30b92a6d0d5955485386b543a842e521ba0882"
+      },
+      "dist": {
+        "reference": "dc99dc19ef68a78c8ecb6fcacbf9ede67d945e1d"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0037",
+        "docs": "https://example.com/support-docs/vendor/pkg-0037",
+        "source": "https://example.com/support-source/vendor/pkg-0037"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0037"
+    },
+    {
+      "name": "vendor/pkg-0038",
+      "version": "3.2.0",
+      "source": {
+        "reference": "4d67182cfc73503763bcf9e6ccaa11be3a91baac"
+      },
+      "dist": {
+        "reference": "23b00d466b1a7b1ac51d05f360feb8e568820c08"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0038",
+        "source": "https://example.com/support-source/vendor/pkg-0038"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0038"
+    },
+    {
+      "name": "vendor/pkg-0039",
+      "version": "4.0.1",
+      "source": {
+        "reference": "416c989da4420bdfdc648c57e2dc786376fbeda8"
+      },
+      "dist": {
+        "reference": "cf4a1db628f31ab97a4fda81c39a514b7f3084b0"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0039"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0039",
+      "abandoned": false
+    },
+    {
+      "name": "vendor/pkg-0040",
+      "version": "dev-main",
+      "source": {
+        "reference": "3f9dfc10803dc6179e1a8092bf67d0f5da5f781a"
+      },
+      "dist": {
+        "reference": "5695761b4841b1e8bc57429ada7d895fdd548051"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0040",
+        "docs": "https://example.com/support-docs/vendor/pkg-0040",
+        "source": "https://example.com/support-source/vendor/pkg-0040"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0040"
+    },
+    {
+      "name": "vendor/pkg-0041",
+      "version": "2.2.1",
+      "source": {
+        "reference": "ecedd8cf0af0c467810dd89b3980c5f5b7c3d2f1"
+      },
+      "dist": {
+        "reference": "854d681d3672f5ec7d4d8d3c6537e3dea4f8dc92"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0041",
+        "source": "https://example.com/support-source/vendor/pkg-0041"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0041"
+    },
+    {
+      "name": "vendor/pkg-0042",
+      "version": "v3.2.0",
+      "source": {
+        "reference": "589411566b54f11f66289388eeda8f6127963e7c"
+      },
+      "dist": {
+        "reference": "c8e9f97dc7a1b1edb78935417851e33b03dab7b0"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0042"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0042"
+    },
+    {
+      "name": "vendor/pkg-0043",
+      "version": "4.1.1",
+      "source": {
+        "reference": "878b63787afc945937a8c50ef1fcb12b938e1434"
+      },
+      "dist": {
+        "reference": "3e724e7807df3970fba22e0d34ab387c58ef10f6"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0043",
+        "docs": "https://example.com/support-docs/vendor/pkg-0043",
+        "source": "https://example.com/support-source/vendor/pkg-0043"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0043"
+    },
+    {
+      "name": "vendor/pkg-0044",
+      "version": "1.2.0",
+      "source": {
+        "reference": "4e5e1099689387b32c8581844b3fae8352812a64"
+      },
+      "dist": {
+        "reference": "5bd68594bfb1c9eda4ae4c98690283bce6d422cb"
+      }
+    },
+    {
+      "name": "vendor/pkg-0045",
+      "version": "2.0.1-beta.0",
+      "source": {
+        "reference": "699eb2ddff9b475b8f9bbfa8d8edf7ea9368f1d4"
+      },
+      "dist": {
+        "reference": "a0adb0c817a412b8b9cbd5a19ebf8cf0aeca32d1"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0045",
+        "source": "https://example.com/support-source/vendor/pkg-0045"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0045"
+    },
+    {
+      "name": "vendor/pkg-0046",
+      "version": "3.1.0",
+      "source": {
+        "reference": "50fe32a12cab10657d0be475e8ea4c3dd0dfae0a"
+      },
+      "dist": {
+        "reference": "30dec3869088a65f60fd52b3f1392f979acac74f"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0046"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0046"
+    },
+    {
+      "name": "vendor/pkg-0047",
+      "version": "4.2.1",
+      "source": {
+        "reference": "3b08c3dcf7fe486ff074ef9052b6bce837006944"
+      },
+      "dist": {
+        "reference": "f040cc4856820f6c4e71b62bf1cad357126329c7"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0047",
+        "docs": "https://example.com/support-docs/vendor/pkg-0047",
+        "source": "https://example.com/support-source/vendor/pkg-0047"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0047"
+    },
+    {
+      "name": "vendor/pkg-0048",
+      "version": "1.0.0",
+      "source": {
+        "reference": "1698dc0e91d1a634ceddc5072289c4cacb5f2493"
+      },
+      "dist": {
+        "reference": "94630b34c70890d98bed699c0eb05e31527b7575"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0048",
+        "source": "https://example.com/support-source/vendor/pkg-0048"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0048"
+    },
+    {
+      "name": "vendor/pkg-0049",
+      "version": "v5.1.1",
+      "source": {
+        "reference": "4d7782fe118ac1422582fceaae2236d430bd2178"
+      },
+      "dist": {
+        "reference": "3b2b5719da0f20f8642649c98370cfe35a16ee3d"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0049"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0049"
+    },
+    {
+      "name": "vendor/pkg-0050",
+      "version": "dev-master",
+      "source": {
+        "reference": "b03e540d1decedfdcd31899767b226ca2a31ec95"
+      },
+      "dist": {
+        "reference": "7e95d646be53792e94a15b5413916b39ab5c8f58"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0050",
+        "docs": "https://example.com/support-docs/vendor/pkg-0050",
+        "source": "https://example.com/support-source/vendor/pkg-0050"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0050"
+    },
+    {
+      "name": "vendor/pkg-0051",
+      "version": "4.0.1",
+      "source": {
+        "reference": "fe096f987dd8e9fec66ede215caf0433320d3ef7"
+      },
+      "dist": {
+        "reference": "1f49d700cbcdca1cd04695018cbc36801f0a6ae7"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0051",
+        "source": "https://example.com/support-source/vendor/pkg-0051"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0051"
+    },
+    {
+      "name": "vendor/pkg-0052",
+      "version": "1.1.0",
+      "source": {
+        "reference": "95c7f0c653bb59bc743fbec196f29271fc9e33b9"
+      },
+      "dist": {
+        "reference": "954b2917a7fc2ed4e029c9e1a9114bf003d13c5e"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0052"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0052",
+      "abandoned": true
+    },
+    {
+      "name": "vendor/pkg-0053",
+      "version": "2.2.1",
+      "source": {
+        "reference": "179e80e8ae24a5d5e8316f6fcbda9f7a5fec471f"
+      },
+      "dist": {
+        "reference": "29119f333954377aa9f4ff40be3638c32c970b31"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0053",
+        "docs": "https://example.com/support-docs/vendor/pkg-0053",
+        "source": "https://example.com/support-source/vendor/pkg-0053"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0053"
+    },
+    {
+      "name": "vendor/pkg-0054",
+      "version": "3.0.0",
+      "source": {
+        "reference": "e82f765f82d5ce32897ec099d5cfe260e98c61fc"
+      },
+      "dist": {
+        "reference": "5e3ca10f4f6907f8f475d8f1337e9318f9dc9879"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0054",
+        "source": "https://example.com/support-source/vendor/pkg-0054"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0054"
+    },
+    {
+      "name": "vendor/pkg-0055",
+      "version": "4.1.1-beta.1",
+      "source": {
+        "reference": "964fbbd68f69534bceeac66891c6039656a52094"
+      },
+      "dist": {
+        "reference": "8dc25ca2a866ad761efcc78b7617d8c7817af818"
+      }
+    },
+    {
+      "name": "vendor/pkg-0056",
+      "version": "v2.0.2",
+      "source": {
+        "reference": "ef3e8c435138175f715587fe8b25a386d270bb6b"
+      },
+      "dist": {
+        "reference": "ff0f672b9c4b7f43c37aa59806be8bc2c316be14"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0056"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0056"
+    },
+    {
+      "name": "vendor/pkg-0057",
+      "version": "2.0.1",
+      "source": {
+        "reference": "87e404d939bec7d7c514bfe2a25e2e241fcf1056"
+      },
+      "dist": {
+        "reference": "df94b767f7127462d553c5f17972f0872fa05b6c"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0057",
+        "docs": "https://example.com/support-docs/vendor/pkg-0057",
+        "source": "https://example.com/support-source/vendor/pkg-0057"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0057"
+    },
+    {
+      "name": "vendor/pkg-0058",
+      "version": "3.1.0",
+      "source": {
+        "reference": "5b7d0499f646c394f849a562ce24937a176bb64e"
+      },
+      "dist": {
+        "reference": "eaf4f0e0b2e7e213c8563b05f7db4e201cc5e7bf"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0058",
+        "source": "https://example.com/support-source/vendor/pkg-0058"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0058"
+    },
+    {
+      "name": "vendor/pkg-0059",
+      "version": "4.2.1",
+      "source": {
+        "reference": "f1696c816a895e57cc180a273e4a43a4da8864da"
+      },
+      "dist": {
+        "reference": "ef59cef75252ccb1c020c06489f6b452ff298ebc"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0059"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0059"
+    },
+    {
+      "name": "vendor/pkg-0060",
+      "version": "3.1.x-dev",
+      "source": {
+        "reference": "0e11ad96f8820b9230f093b0f7db8e8017bd9a97"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0060",
+        "docs": "https://example.com/support-docs/vendor/pkg-0060",
+        "source": "https://example.com/support-source/vendor/pkg-0060"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0060"
+    },
+    {
+      "name": "vendor/pkg-0061",
+      "version": "2.1.1",
+      "source": {
+        "reference": "b0d2fe2c2979c6b4f90cbb3c3bec5581509e684d"
+      },
+      "dist": {
+        "reference": "2f8244bf76f1a1f07fd756be0c59947f6ed016a7"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0061",
+        "source": "https://example.com/support-source/vendor/pkg-0061"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0061"
+    },
+    {
+      "name": "vendor/pkg-0062",
+      "version": "3.2.0",
+      "source": {
+        "reference": "0f077e33c67d7990d8a4cf944df600be88f35251"
+      },
+      "dist": {
+        "reference": "6028ba694e544189b6136083332402f10edebbff"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0062"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0062"
+    },
+    {
+      "name": "vendor/pkg-0063",
+      "version": "v4.3.0",
+      "source": {
+        "reference": "ef153c48509168bbfb0ae53bfdc85ee422c5f784"
+      },
+      "dist": {
+        "reference": "b227baeb750b25cf271df322b0402f1c642c4704"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0063",
+        "docs": "https://example.com/support-docs/vendor/pkg-0063",
+        "source": "https://example.com/support-source/vendor/pkg-0063"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0063"
+    },
+    {
+      "name": "vendor/pkg-0064",
+      "version": "1.1.0",
+      "source": {
+        "reference": "3b22641fa72e14ce7501aa6204855d630ed4ce43"
+      },
+      "dist": {
+        "reference": "f9ea1f18cfa54fce50864cd1b0899f27f683ec5b"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0064",
+        "source": "https://example.com/support-source/vendor/pkg-0064"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0064"
+    },
+    {
+      "name": "vendor/pkg-0065",
+      "version": "2.2.1-beta.2",
+      "source": {
+        "reference": "f1fc3b1511026dbfeed447d06f2bc4b585d2e381"
+      },
+      "dist": {
+        "reference": "b8d1f2ca6a8c3ae291ddb96a312f30afff9c5387"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0065"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0065",
+      "abandoned": "https://packagist.org/packages/vendor-pkg-0065"
+    },
+    {
+      "name": "vendor/pkg-0066",
+      "version": "3.0.0",
+      "source": {
+        "reference": "de3e219e29f374c5838479e410bbdf16d00c9b4d"
+      },
+      "dist": {
+        "reference": "684dad5c9252fe177d201a1b141e96eedbd540f4"
+      }
+    },
+    {
+      "name": "vendor/pkg-0067",
+      "version": "4.1.1",
+      "source": {
+        "reference": "c5deb481f59f6cbcd1a263399b874a41f877a4d9"
+      },
+      "dist": {
+        "reference": "14873325ce75f79333ec16badb9e4fcdbc088672"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0067",
+        "docs": "https://example.com/support-docs/vendor/pkg-0067",
+        "source": "https://example.com/support-source/vendor/pkg-0067"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0067"
+    },
+    {
+      "name": "vendor/pkg-0068",
+      "version": "1.2.0",
+      "source": {
+        "reference": "d47596afcb49d17af2ddc5a43be333f69f0f707b"
+      },
+      "dist": {
+        "reference": "0aec8ee0a31326bae3936624b1e731729b49af9f"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0068",
+        "source": "https://example.com/support-source/vendor/pkg-0068"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0068"
+    },
+    {
+      "name": "vendor/pkg-0069",
+      "version": "2.0.1",
+      "source": {
+        "reference": "3591493406fc4e9a474ca793cb25fbcf45c860e3"
+      },
+      "dist": {
+        "reference": "b37e37f2111de2870bdc65c9dbfb2c30f9b5890d"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0069"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0069"
+    },
+    {
+      "name": "vendor/pkg-0070",
+      "version": "dev-feature/awesome-feature",
+      "source": {
+        "reference": "bc58fe78838695cf16f7be8f33b79b81d14ad5c4"
+      },
+      "dist": {
+        "reference": "1abd40fc0f178273874183910b1203ac6867db2c"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0070",
+        "docs": "https://example.com/support-docs/vendor/pkg-0070",
+        "source": "https://example.com/support-source/vendor/pkg-0070"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0070"
+    },
+    {
+      "name": "vendor/pkg-0071",
+      "version": "4.2.1",
+      "source": {
+        "reference": "eed25f616a6646f519ccb3ff8a9b4a0184bca046"
+      },
+      "dist": {
+        "reference": "d865685f1f2e80c981145814dea69e60316d4074"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0071",
+        "source": "https://example.com/support-source/vendor/pkg-0071"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0071"
+    },
+    {
+      "name": "vendor/pkg-0072",
+      "version": "1.0.0",
+      "source": {
+        "reference": "5f73f33aca62c9199ac733be991d06bb1bf26302"
+      },
+      "dist": {
+        "reference": "630e82018c3c5d9d4ab795f140005073cd0d81dc"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0072"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0072"
+    },
+    {
+      "name": "vendor/pkg-0073",
+      "version": "2.1.1",
+      "source": {
+        "reference": "7fd61f42bf75022dc81d6c3add3bbcec2efb6754"
+      },
+      "dist": {
+        "reference": "ccc5aeb3977dfd5625c03eec6a40feab43a25ba1"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0073",
+        "docs": "https://example.com/support-docs/vendor/pkg-0073",
+        "source": "https://example.com/support-source/vendor/pkg-0073"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0073"
+    },
+    {
+      "name": "vendor/pkg-0074",
+      "version": "3.2.0",
+      "source": {
+        "reference": "59fb65d344d5e22267cad8f2386b0390ed6b7479"
+      },
+      "dist": {
+        "reference": "3288b87bdaee4bff0aaf84004bbac7900898f2b8"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0074",
+        "source": "https://example.com/support-source/vendor/pkg-0074"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0074"
+    },
+    {
+      "name": "vendor/pkg-0075",
+      "version": "4.0.1-beta.0",
+      "source": {
+        "reference": "0ba4ece45078f1df5e168769b4f72a182d3caff2"
+      },
+      "dist": {
+        "reference": "21b4b8ea5c4e1ffd91df7360ea909a1d268c07af"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0075"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0075"
+    },
+    {
+      "name": "vendor/pkg-0076",
+      "version": "1.1.0",
+      "source": {
+        "reference": "9f8c0b96b8da0815956cf42b7598288523ae2a99"
+      },
+      "dist": {
+        "reference": "e417a0a6f1c249cc607df31a72e4d109b6e00298"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0076",
+        "docs": "https://example.com/support-docs/vendor/pkg-0076",
+        "source": "https://example.com/support-source/vendor/pkg-0076"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0076"
+    },
+    {
+      "name": "vendor/pkg-0077",
+      "version": "v3.1.2",
+      "source": {
+        "reference": "87f34acb04d9762d2161dab6915b4230af76fb8f"
+      },
+      "dist": {
+        "reference": "02f77aeb93acb13ec1fc81ca7527722ae789894f"
+      }
+    },
+    {
+      "name": "vendor/pkg-0078",
+      "version": "3.0.0",
+      "source": {
+        "reference": "dd34f9c84cedfe3b216620ac7d77c33fd3e7d1f3"
+      },
+      "dist": {
+        "reference": "babb70f34e348e53b3674228bc8c6adea83f0a13"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0078",
+        "source": "https://example.com/support-source/vendor/pkg-0078"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0078",
+      "abandoned": false
+    },
+    {
+      "name": "vendor/pkg-0079",
+      "version": "4.1.1",
+      "source": {
+        "reference": "7f3789ae53ade42fe5434a1ced598557d1dd0c89"
+      },
+      "dist": {
+        "reference": "fa8d2591c80ada17a46bb25f35db0a1627499f78"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0079"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0079"
+    },
+    {
+      "name": "vendor/pkg-0080",
+      "version": "2.1.x-dev",
+      "source": {
+        "reference": "4599bc2a13ed6bcc3aa8a96e0e4c54174f8be802"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0080",
+        "docs": "https://example.com/support-docs/vendor/pkg-0080",
+        "source": "https://example.com/support-source/vendor/pkg-0080"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0080"
+    },
+    {
+      "name": "vendor/pkg-0081",
+      "version": "2.0.1",
+      "source": {
+        "reference": "13f09bae727e3a06fa302ce33bf10822daca9a2d"
+      },
+      "dist": {
+        "reference": "220b7954c35cd54566a459af00d735c62ae6fe65"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0081",
+        "source": "https://example.com/support-source/vendor/pkg-0081"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0081"
+    },
+    {
+      "name": "vendor/pkg-0082",
+      "version": "3.1.0",
+      "source": {
+        "reference": "b3ac48e2670cc93019df8f6f2926c7c1e1f25efc"
+      },
+      "dist": {
+        "reference": "b7fec25ac99ad4f2351629a74f28119ab1191410"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0082"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0082"
+    },
+    {
+      "name": "vendor/pkg-0083",
+      "version": "4.2.1",
+      "source": {
+        "reference": "225f831220ee5bbf1c6368b0662c6b9a363c245d"
+      },
+      "dist": {
+        "reference": "b86917c8469470ad137b6a0a03837e9be06691bd"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0083",
+        "docs": "https://example.com/support-docs/vendor/pkg-0083",
+        "source": "https://example.com/support-source/vendor/pkg-0083"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0083"
+    },
+    {
+      "name": "vendor/pkg-0084",
+      "version": "v5.0.0",
+      "source": {
+        "reference": "7545406b1350d841c9034b34581ec23d3487faf0"
+      },
+      "dist": {
+        "reference": "9cd4e8f0646a08479c86991416728a3f545b1e01"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0084",
+        "source": "https://example.com/support-source/vendor/pkg-0084"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0084"
+    },
+    {
+      "name": "vendor/pkg-0085",
+      "version": "2.1.1-beta.1",
+      "source": {
+        "reference": "707e43f7115f5fc94f83bb224210637daab7b4b4"
+      },
+      "dist": {
+        "reference": "1ebe03548f4e13315a63f8210eaac3d2262ca520"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0085"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0085"
+    },
+    {
+      "name": "vendor/pkg-0086",
+      "version": "3.2.0",
+      "source": {
+        "reference": "0ae5ab2812d0eb52a0c2a6ff6f631706775f7e64"
+      },
+      "dist": {
+        "reference": "4fa8aa7baf9c179af7e66847c635017ee33f8ef8"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0086",
+        "docs": "https://example.com/support-docs/vendor/pkg-0086",
+        "source": "https://example.com/support-source/vendor/pkg-0086"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0086"
+    },
+    {
+      "name": "vendor/pkg-0087",
+      "version": "4.0.1",
+      "source": {
+        "reference": "33f72267846bab0a6fdd3e128f8c8b18e3b94481"
+      },
+      "dist": {
+        "reference": "0f4038ca4c3ef492f21802ba3254d6568638a016"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0087",
+        "source": "https://example.com/support-source/vendor/pkg-0087"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0087"
+    },
+    {
+      "name": "vendor/pkg-0088",
+      "version": "1.1.0",
+      "source": {
+        "reference": "224e61799be632d43f53e367b4185f21143e61c3"
+      },
+      "dist": {
+        "reference": "2f5382727b6c434bb31bd67bdb3a87fd45e18c1f"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0088"
+    },
+    {
+      "name": "vendor/pkg-0089",
+      "version": "2.2.1",
+      "source": {
+        "reference": "bba8005e21c8c792da56cf75e7dd8738a601e7a3"
+      },
+      "dist": {
+        "reference": "ff620ccb8612e04cb93afed058bf315182a8f8e2"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0089"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0089"
+    },
+    {
+      "name": "vendor/pkg-0090",
+      "version": "dev-master",
+      "source": {
+        "reference": "15bffa7220047fad58761bcdf1990b4090200353"
+      },
+      "dist": {
+        "reference": "e643d0fa6e8b0a92f19ecce35b77de2d9f9bd749"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0090",
+        "docs": "https://example.com/support-docs/vendor/pkg-0090",
+        "source": "https://example.com/support-source/vendor/pkg-0090"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0090"
+    },
+    {
+      "name": "vendor/pkg-0091",
+      "version": "v2.3.1",
+      "source": {
+        "reference": "df5f0870d1be43d3a82e5a13f4efebc1be0df26f"
+      },
+      "dist": {
+        "reference": "4619700c2577518d577170d0d01866984e51804a"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0091",
+        "source": "https://example.com/support-source/vendor/pkg-0091"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0091",
+      "abandoned": true
+    },
+    {
+      "name": "vendor/pkg-0092",
+      "version": "1.2.0",
+      "source": {
+        "reference": "9090f58ef198b981b181fc63b53a37c45c9d2d96"
+      },
+      "dist": {
+        "reference": "c0b791843f2bead4ff4962efd0b50f5a9d8a57dc"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0092"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0092"
+    },
+    {
+      "name": "vendor/pkg-0093",
+      "version": "2.0.1",
+      "source": {
+        "reference": "24d13cc11f0b1faec70d33ef99c3d1f6877eec92"
+      },
+      "dist": {
+        "reference": "c9a2c07dbc37df1b69550770ebf83bafc7313a15"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0093",
+        "docs": "https://example.com/support-docs/vendor/pkg-0093",
+        "source": "https://example.com/support-source/vendor/pkg-0093"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0093"
+    },
+    {
+      "name": "vendor/pkg-0094",
+      "version": "3.1.0",
+      "source": {
+        "reference": "a4af4238a69fba012a178addb8f5af882d286143"
+      },
+      "dist": {
+        "reference": "0c8f56ddbefaa6acae7e7ef2cf8e2a1c8e7c667e"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0094",
+        "source": "https://example.com/support-source/vendor/pkg-0094"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0094"
+    },
+    {
+      "name": "vendor/pkg-0095",
+      "version": "4.2.1-beta.2",
+      "source": {
+        "reference": "e46b411b133b5e8c2e1b33967d5a097579179e52"
+      },
+      "dist": {
+        "reference": "84fb517a34488ebff39cfecbd35d11c7a8936d46"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0095"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0095"
+    },
+    {
+      "name": "vendor/pkg-0096",
+      "version": "1.0.0",
+      "source": {
+        "reference": "3fe30b749ae033213a3993231b9e2c1197b9ccab"
+      },
+      "dist": {
+        "reference": "bb1192f225ef02034fce1922417eb4573def2803"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0096",
+        "docs": "https://example.com/support-docs/vendor/pkg-0096",
+        "source": "https://example.com/support-source/vendor/pkg-0096"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0096"
+    },
+    {
+      "name": "vendor/pkg-0097",
+      "version": "2.1.1",
+      "source": {
+        "reference": "5f8ed2ab97a4976a9e4c5ebbca8343c859d07dd5"
+      },
+      "dist": {
+        "reference": "2ae647d79f57c458a84f18a28e3cf34a44e98a46"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0097",
+        "source": "https://example.com/support-source/vendor/pkg-0097"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0097"
+    },
+    {
+      "name": "vendor/pkg-0098",
+      "version": "v4.2.2",
+      "source": {
+        "reference": "2ecd340c83eb57ce1a11530ac045c1f694fa0209"
+      },
+      "dist": {
+        "reference": "e58d94882d8b7b25afbce3d1d011d5f616b2d3f1"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0098"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0098"
+    },
+    {
+      "name": "vendor/pkg-0099",
+      "version": "4.0.1",
+      "source": {
+        "reference": "22bc2d9ac2cd8de2a7b2a94186ce355265b7e2f2"
+      },
+      "dist": {
+        "reference": "7de71036f224148be541c4ac0a018243234dd4cf"
+      }
+    },
+    {
+      "name": "vendor/pkg-0100",
+      "version": "dev-master",
+      "source": {
+        "reference": "a25506f44c1371af4fe948a4e8470c31424f6c36"
+      },
+      "dist": {
+        "reference": "f72ac1c48716475182f43a1abcafd368791fa11b"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0100",
+        "docs": "https://example.com/support-docs/vendor/pkg-0100",
+        "source": "https://example.com/support-source/vendor/pkg-0100"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0100"
+    },
+    {
+      "name": "vendor/pkg-0109",
+      "version": "2.1.1",
+      "source": {
+        "reference": "8945f7ef0684e4877e355a345588c2e882b8dea5"
+      },
+      "dist": {
+        "reference": "8989f396a56576ad2bde59e211133894f1eae8e4"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0109",
+        "docs": "https://example.com/support-docs/vendor/pkg-0109",
+        "source": "https://example.com/support-source/vendor/pkg-0109"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0109"
+    },
+    {
+      "name": "vendor/pkg-0119",
+      "version": "v5.3.2",
+      "source": {
+        "reference": "fbb8d03b7c00841bcf745927c99c3dfbcab982cb"
+      },
+      "dist": {
+        "reference": "79815a462b3e40d4bb1a2fbf65d471c81a71eec6"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0119",
+        "docs": "https://example.com/support-docs/vendor/pkg-0119",
+        "source": "https://example.com/support-source/vendor/pkg-0119"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0119"
+    }
+  ],
+  "packages-dev": [
+    {
+      "name": "vendor/pkg-0101",
+      "version": "2.2.1",
+      "source": {
+        "reference": "c8eed7d69eeb2e914e30eff57e2d9ab14c35f624"
+      },
+      "dist": {
+        "reference": "fe6b450a13a164fddcb5065544c556c4c703ffd7"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0101",
+        "source": "https://example.com/support-source/vendor/pkg-0101"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0101"
+    },
+    {
+      "name": "vendor/pkg-0102",
+      "version": "3.0.0",
+      "source": {
+        "reference": "8a37af8ee98f55b7c6bea9298827c66ad7afa83d"
+      },
+      "dist": {
+        "reference": "ba6e0f8cb27cc8b55afbc43cc4d843462978db20"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0102"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0102"
+    },
+    {
+      "name": "vendor/pkg-0103",
+      "version": "4.1.1",
+      "source": {
+        "reference": "d473ba195c1ba044b686558429a9de19acd4cd2c"
+      },
+      "dist": {
+        "reference": "2931b815a63cf89cb3725ae5784ab11a73b1d9f8"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0103",
+        "docs": "https://example.com/support-docs/vendor/pkg-0103",
+        "source": "https://example.com/support-source/vendor/pkg-0103"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0103"
+    },
+    {
+      "name": "vendor/pkg-0104",
+      "version": "1.2.0",
+      "source": {
+        "reference": "8f3d599a008e71f46763b920d3afe28fe677f513"
+      },
+      "dist": {
+        "reference": "11fac31a34f944a0181d17d4c4ecfcae7ef41dad"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0104",
+        "source": "https://example.com/support-source/vendor/pkg-0104"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0104",
+      "abandoned": true
+    },
+    {
+      "name": "vendor/pkg-0105",
+      "version": "v1.1.0",
+      "source": {
+        "reference": "ef36a4ceaede7d06381b8c13ccdba8778d2e36df"
+      },
+      "dist": {
+        "reference": "fb4eba07b2dbf4aed76133b620c8ab62e2697a34"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0105"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0105"
+    },
+    {
+      "name": "vendor/pkg-0106",
+      "version": "3.1.0",
+      "source": {
+        "reference": "45d01e6cc7f9629a6e09850b5a2ad34ce4e9c5a3"
+      },
+      "dist": {
+        "reference": "dfa50ceb2b3306e55905fec8e0889b723ae500ec"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0106",
+        "docs": "https://example.com/support-docs/vendor/pkg-0106",
+        "source": "https://example.com/support-source/vendor/pkg-0106"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0106"
+    },
+    {
+      "name": "vendor/pkg-0107",
+      "version": "4.2.1",
+      "source": {
+        "reference": "58d0e8d420a58cca5580d5b77623ffe17e155b2a"
+      },
+      "dist": {
+        "reference": "7ec7196b36c80d5cda4058f6e6443d168146fcfd"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0107",
+        "source": "https://example.com/support-source/vendor/pkg-0107"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0107"
+    },
+    {
+      "name": "vendor/pkg-0108",
+      "version": "1.0.0",
+      "source": {
+        "reference": "0e982d338034afb72349205c8081be4df990a2f8"
+      },
+      "dist": {
+        "reference": "c690cc695b5e35ac20c0bb0cda4cb0ca096050f1"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0108"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0108"
+    },
+    {
+      "name": "vendor/pkg-0110",
+      "version": "1.2.x-dev",
+      "source": {
+        "reference": "9dd89e1b595ab1a5221e094637db60526c240826"
+      },
+      "dist": {
+        "reference": "e51d682ae5e7d39ffef508f906b4428249476547"
+      }
+    },
+    {
+      "name": "vendor/pkg-0111",
+      "version": "4.0.1",
+      "source": {
+        "reference": "abef32c58f8911885d092fcfb07d1f368d67df37"
+      },
+      "dist": {
+        "reference": "cbe7400e43bf0cdceed356622b94f463504c9b89"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0111",
+        "source": "https://example.com/support-source/vendor/pkg-0111"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0111"
+    },
+    {
+      "name": "vendor/pkg-0112",
+      "version": "v3.0.1",
+      "source": {
+        "reference": "3e7d15bcf48fa3b2ced21e69050c206b13393130"
+      },
+      "dist": {
+        "reference": "c2d4285fd3ad717597de20356d7df8c18a8e107f"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0112"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0112"
+    },
+    {
+      "name": "vendor/pkg-0113",
+      "version": "2.2.1",
+      "source": {
+        "reference": "9bb9536ec189a4ebd1190005ada4e999cdf74197"
+      },
+      "dist": {
+        "reference": "a08f19aa5cf01cb4c583eea38a0464f5a29609b5"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0113",
+        "docs": "https://example.com/support-docs/vendor/pkg-0113",
+        "source": "https://example.com/support-source/vendor/pkg-0113"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0113"
+    },
+    {
+      "name": "vendor/pkg-0114",
+      "version": "3.0.0",
+      "source": {
+        "reference": "16ebf7148ef417f977d4dea95fe8e523fd41ef6a"
+      },
+      "dist": {
+        "reference": "39fb09c868c213a2f5622a87db4678214463b7c7"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0114",
+        "source": "https://example.com/support-source/vendor/pkg-0114"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0114"
+    },
+    {
+      "name": "vendor/pkg-0115",
+      "version": "4.1.1-beta.1",
+      "source": {
+        "reference": "27a20166f318cd716b9f63fd83f3acebce962ce6"
+      },
+      "dist": {
+        "reference": "842aa71d08469841fb3994de00c4e9548d3dad77"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0115"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0115"
+    },
+    {
+      "name": "vendor/pkg-0116",
+      "version": "1.2.0",
+      "source": {
+        "reference": "f22fd698eb39002228af2ba87657606e79af6aa4"
+      },
+      "dist": {
+        "reference": "9d5b673bc868954afbd11e6d758742049824337c"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0116",
+        "docs": "https://example.com/support-docs/vendor/pkg-0116",
+        "source": "https://example.com/support-source/vendor/pkg-0116"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0116"
+    },
+    {
+      "name": "vendor/pkg-0117",
+      "version": "2.0.1",
+      "source": {
+        "reference": "d70385348911d28cf6ca1dd028d84c632a7b1024"
+      },
+      "dist": {
+        "reference": "db6bb40be309d67b79160691dfd474ef3ed54474"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0117",
+        "source": "https://example.com/support-source/vendor/pkg-0117"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0117",
+      "abandoned": "https://packagist.org/packages/vendor-pkg-0117"
+    },
+    {
+      "name": "vendor/pkg-0118",
+      "version": "3.1.0",
+      "source": {
+        "reference": "15461f4caf187da1ea71b98a119f8e7a4559aed2"
+      },
+      "dist": {
+        "reference": "a71c2675a385ded241433ec40c19a93bf8f9b848"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0118"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0118"
+    },
+    {
+      "name": "vendor/pkg-0120",
+      "version": "dev-master",
+      "source": {
+        "reference": "840b233e8d7917d5e601fd85a7a78a784a487c05"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0120",
+        "source": "https://example.com/support-source/vendor/pkg-0120"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0120"
+    },
+    {
+      "name": "vendor/pkg-0121",
+      "version": "2.1.1",
+      "source": {
+        "reference": "4e06cef5949d78d4908b8891065247350d056b3f"
+      },
+      "dist": {
+        "reference": "d3376600c4c0d5c0548b1333f2598bce38ee1e70"
+      }
+    },
+    {
+      "name": "vendor/pkg-0122",
+      "version": "3.2.0",
+      "source": {
+        "reference": "4d61c16224e530f42d5a0a71bb4f4f60182e52de"
+      },
+      "dist": {
+        "reference": "e8f5ac73beeb928a7035ad892ff50ff9b5ceea3f"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0122"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0122"
+    },
+    {
+      "name": "vendor/pkg-0123",
+      "version": "4.0.1",
+      "source": {
+        "reference": "57d606d92de106cd547f95a0bb2d6eca405b0c65"
+      },
+      "dist": {
+        "reference": "5666281b66c27974069f296d30bc0afc690b893d"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0123",
+        "docs": "https://example.com/support-docs/vendor/pkg-0123",
+        "source": "https://example.com/support-source/vendor/pkg-0123"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0123"
+    },
+    {
+      "name": "vendor/pkg-0124",
+      "version": "1.1.0",
+      "source": {
+        "reference": "d085ddcbad2b2e04e8b46b5a68499024e32bbd15"
+      },
+      "dist": {
+        "reference": "e19d8844e8b906af5a059f8c51418d7586ddef9d"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0124",
+        "source": "https://example.com/support-source/vendor/pkg-0124"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0124"
+    },
+    {
+      "name": "vendor/pkg-0125",
+      "version": "2.2.1-beta.2",
+      "source": {
+        "reference": "8dfd1ef9786a004a245b1697f47001458a61be3b"
+      },
+      "dist": {
+        "reference": "8f63ddb8c846b34aed8ec0819b52790ad71ca871"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0125"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0125"
+    },
+    {
+      "name": "vendor/pkg-0126",
+      "version": "v2.2.0",
+      "source": {
+        "reference": "3fd0142470267b3812f50689b65c1cd890002008"
+      },
+      "dist": {
+        "reference": "b18354fdb75e3b412690b08b54ff2e6b9ee5d75a"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0126",
+        "docs": "https://example.com/support-docs/vendor/pkg-0126",
+        "source": "https://example.com/support-source/vendor/pkg-0126"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0126"
+    },
+    {
+      "name": "vendor/pkg-0127",
+      "version": "4.1.1",
+      "source": {
+        "reference": "cd87b98b318ec0304be6500edfb749943dd55538"
+      },
+      "dist": {
+        "reference": "8c9c9c15397a7c776e2ca3d75de616f4a14b37b5"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0127",
+        "source": "https://example.com/support-source/vendor/pkg-0127"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0127"
+    },
+    {
+      "name": "vendor/pkg-0128",
+      "version": "1.2.0",
+      "source": {
+        "reference": "9cb94bf0d5071b0ab30df6baae30252e257e8d34"
+      },
+      "dist": {
+        "reference": "17dce20a38ad7b79d226faa324c6b971e277879b"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0128"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0128"
+    },
+    {
+      "name": "vendor/pkg-0129",
+      "version": "2.0.1",
+      "source": {
+        "reference": "2abe2760323558b8f41ba4633f46a2e5525b566d"
+      },
+      "dist": {
+        "reference": "ce86c950ad6b790eb3439f61a9c138967e9ffdbc"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0129",
+        "docs": "https://example.com/support-docs/vendor/pkg-0129",
+        "source": "https://example.com/support-source/vendor/pkg-0129"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0129"
+    },
+    {
+      "name": "vendor/pkg-0130",
+      "version": "1.2-dev",
+      "source": {
+        "reference": "0b849f7d875aeb313fc0f0a63d21abb87c15c8db"
+      },
+      "dist": {
+        "reference": "b1ab687038b06de2b5b8c572d76307fb7dc1354a"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0130",
+        "source": "https://example.com/support-source/vendor/pkg-0130"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0130",
+      "abandoned": false
+    },
+    {
+      "name": "vendor/pkg-0131",
+      "version": "4.2.1",
+      "source": {
+        "reference": "17caedb61a0d9289b901dd276dffaff32b0e6d0f"
+      },
+      "dist": {
+        "reference": "0ea35832ac681619fde82379ad1adc6fc2354c60"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0131"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0131"
+    },
+    {
+      "name": "vendor/pkg-0132",
+      "version": "1.0.0",
+      "source": {
+        "reference": "02b87b20998b6067f4c220f0bf3999ba83a839e4"
+      },
+      "dist": {
+        "reference": "c326d6850ffd85a4acfc474ea0156a3027a31624"
+      }
+    },
+    {
+      "name": "vendor/pkg-0133",
+      "version": "v4.1.1",
+      "source": {
+        "reference": "8bbfd4bb42b6cc2c1c873d5ab273c1e3cdd8db32"
+      },
+      "dist": {
+        "reference": "fc6ae4c4c257cb197db277bf06575a052dc736fb"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0133",
+        "docs": "https://example.com/support-docs/vendor/pkg-0133",
+        "source": "https://example.com/support-source/vendor/pkg-0133"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0133"
+    },
+    {
+      "name": "vendor/pkg-0134",
+      "version": "3.2.0",
+      "source": {
+        "reference": "af798d7c003f9a5c1cc7f0787a25f321ec57646e"
+      },
+      "dist": {
+        "reference": "6d36b3317efacccbd17ef87e268e21eab0b2af7d"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0134",
+        "source": "https://example.com/support-source/vendor/pkg-0134"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0134"
+    },
+    {
+      "name": "vendor/pkg-0135",
+      "version": "4.0.1-beta.0",
+      "source": {
+        "reference": "81e86e1b6b979aba2c55c113d9862b4da606cec2"
+      },
+      "dist": {
+        "reference": "eb94e86845678a33a6947a23a62aa4b791321463"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0135"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0135"
+    },
+    {
+      "name": "vendor/pkg-0136",
+      "version": "1.1.0",
+      "source": {
+        "reference": "07962bff18fb2f3bc6b847ed3359ceb8cce80315"
+      },
+      "dist": {
+        "reference": "12c448721fc497fbea2ed98f0638980fd571804d"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0136",
+        "docs": "https://example.com/support-docs/vendor/pkg-0136",
+        "source": "https://example.com/support-source/vendor/pkg-0136"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0136"
+    },
+    {
+      "name": "vendor/pkg-0137",
+      "version": "2.2.1",
+      "source": {
+        "reference": "100cafbebb187e22c3d1f53dc30bd51f761b7f1e"
+      },
+      "dist": {
+        "reference": "28b77a899da1bfda95bc6e71638796ee7f975d9c"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0137",
+        "source": "https://example.com/support-source/vendor/pkg-0137"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0137"
+    },
+    {
+      "name": "vendor/pkg-0138",
+      "version": "3.0.0",
+      "source": {
+        "reference": "3e370ad71793cc78c709abe97c95ba96099f8898"
+      },
+      "dist": {
+        "reference": "cf698778517ce3bbdaa18bc653d47253969110ff"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0138"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0138"
+    },
+    {
+      "name": "vendor/pkg-0139",
+      "version": "4.1.1",
+      "source": {
+        "reference": "06c55f54cdf47aeafde8cd11159e2353d7866cef"
+      },
+      "dist": {
+        "reference": "ca0ed5f666073f61a4535c71a8171b5785442613"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0139",
+        "docs": "https://example.com/support-docs/vendor/pkg-0139",
+        "source": "https://example.com/support-source/vendor/pkg-0139"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0139"
+    },
+    {
+      "name": "vendor/pkg-0140",
+      "version": "dev-master",
+      "source": {
+        "reference": "9324cc34b5c024b5422cba10d7aeb3b427958e55"
+      },
+      "dist": {
+        "reference": "882e270be9da8bec0be5c347ebe1e9a634723b4f"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0140",
+        "source": "https://example.com/support-source/vendor/pkg-0140"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0140"
+    },
+    {
+      "name": "vendor/pkg-0141",
+      "version": "2.0.1",
+      "source": {
+        "reference": "37eec7bdb32513616317e08d846a93ac847c185c"
+      },
+      "dist": {
+        "reference": "4437457ee8b279aeeadf78d478e830127d47bdcb"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0141"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0141"
+    },
+    {
+      "name": "vendor/pkg-0142",
+      "version": "3.1.0",
+      "source": {
+        "reference": "6d163141ac15497e73a3100076c2e36d34c8d610"
+      },
+      "dist": {
+        "reference": "742a5539bc5cbf532828e6098c761046d1ae86c9"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0142",
+        "docs": "https://example.com/support-docs/vendor/pkg-0142",
+        "source": "https://example.com/support-source/vendor/pkg-0142"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0142"
+    },
+    {
+      "name": "vendor/pkg-0143",
+      "version": "4.2.1",
+      "source": {
+        "reference": "741554f9b7f4ba7ada32c4b3bbeca5ecd865481d"
+      },
+      "dist": {
+        "reference": "66e2828e49f69486320e91e931d4a40f3c97cb3e"
+      },
+      "abandoned": true
+    },
+    {
+      "name": "vendor/pkg-0144",
+      "version": "1.0.0",
+      "source": {
+        "reference": "8fba10c25a8d39fb9b3801eed00a858cf5871207"
+      },
+      "dist": {
+        "reference": "6cd5b937950b5ca5ce3166813aad8fa4f123ab86"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0144",
+        "source": "https://example.com/support-source/vendor/pkg-0144"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0144"
+    },
+    {
+      "name": "vendor/pkg-0145",
+      "version": "2.1.1-beta.1",
+      "source": {
+        "reference": "a4cbb042a4fa91363fd8eaba6914fddf0281d49f"
+      },
+      "dist": {
+        "reference": "b5f5d38a6dd55094e6e25051fdcdc2d0d400631a"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0145"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0145"
+    },
+    {
+      "name": "vendor/pkg-0146",
+      "version": "3.2.0",
+      "source": {
+        "reference": "f12c289c152e7d30bced45960fbab1118e775c4f"
+      },
+      "dist": {
+        "reference": "ffbdc2956a3db8a5e0aff4f6daf917f1ffa0fcad"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0146",
+        "docs": "https://example.com/support-docs/vendor/pkg-0146",
+        "source": "https://example.com/support-source/vendor/pkg-0146"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0146"
+    },
+    {
+      "name": "vendor/pkg-0147",
+      "version": "v3.3.0",
+      "source": {
+        "reference": "b4adc2b3ec76f258563acd67437660ea8e25b252"
+      },
+      "dist": {
+        "reference": "6b59178ef70ee1b2b005ea2e69e5f66d08327899"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0147",
+        "source": "https://example.com/support-source/vendor/pkg-0147"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0147"
+    },
+    {
+      "name": "vendor/pkg-0148",
+      "version": "1.1.0",
+      "source": {
+        "reference": "8b17425fdc620b1e27c1e8945b4790a4a27bdf36"
+      },
+      "dist": {
+        "reference": "a5cbd125723ca5ec9aa5efcf9f591ef4aadd6536"
+      },
+      "support": {
+        "source": "https://example.com/support-source/vendor/pkg-0148"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0148"
+    },
+    {
+      "name": "vendor/pkg-0149",
+      "version": "2.2.1",
+      "source": {
+        "reference": "8d0d4cb4dae6367e8145b4744d0937f1d4387009"
+      },
+      "dist": {
+        "reference": "3003b9333d91a01f827ce585bfa39a69cd19806e"
+      },
+      "support": {
+        "wiki": "https://example.com/support-wiki/vendor/pkg-0149",
+        "docs": "https://example.com/support-docs/vendor/pkg-0149",
+        "source": "https://example.com/support-source/vendor/pkg-0149"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0149"
+    },
+    {
+      "name": "vendor/pkg-0150",
+      "version": "dev-master",
+      "source": {
+        "reference": "bcfdbc84c28a5bd099476ce1fe0f4e1d2b0d873a"
+      },
+      "support": {
+        "docs": "https://example.com/support-docs/vendor/pkg-0150",
+        "source": "https://example.com/support-source/vendor/pkg-0150"
+      },
+      "homepage": "https://github.com/example/homepage/vendor/pkg-0150"
+    }
+  ]
+}

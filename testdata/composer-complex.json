@@ -1,0 +1,36 @@
+{
+  "require": {
+    "vendor/pkg-0001": "^1.0",
+    "vendor/pkg-0002": "^1.0",
+    "vendor/pkg-0003": "^1.0",
+    "vendor/pkg-0004": "^1.0",
+    "vendor/pkg-0005": "^1.0",
+    "vendor/pkg-0006": "^1.0",
+    "vendor/pkg-0007": "^1.0",
+    "vendor/pkg-0008": "^1.0",
+    "vendor/pkg-0009": "^1.0",
+    "vendor/pkg-0010": "dev-master",
+    "vendor/pkg-0011": "^1.0",
+    "vendor/pkg-0012": "^1.0",
+    "vendor/pkg-0013": "^1.0",
+    "vendor/pkg-0014": "^1.0",
+    "vendor/pkg-0015": "^1.0",
+    "vendor/pkg-0016": "^1.0",
+    "vendor/pkg-0017": "^1.0",
+    "vendor/pkg-0018": "^1.0",
+    "vendor/pkg-0019": "^1.0",
+    "vendor/pkg-0020": "dev-feature/main"
+  },
+  "require-dev": {
+    "vendor/pkg-0101": "^1.0",
+    "vendor/pkg-0102": "^1.0",
+    "vendor/pkg-0103": "^1.0",
+    "vendor/pkg-0104": "^1.0",
+    "vendor/pkg-0105": "^1.0",
+    "vendor/pkg-0106": "^1.0",
+    "vendor/pkg-0107": "^1.0",
+    "vendor/pkg-0108": "^1.0",
+    "vendor/pkg-0109": "^1.0",
+    "vendor/pkg-0110": "^1.0"
+  }
+}
