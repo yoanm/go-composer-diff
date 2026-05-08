@@ -5,6 +5,8 @@ import (
 	"os"
 	"testing"
 
+	"github.com/andreyvit/diff"
+
 	"github.com/yoanm/go-deps-diff/contract"
 	"github.com/yoanm/go-deps-diff/contract/semver"
 	difftesting "github.com/yoanm/go-deps-diff/testing"
@@ -16,10 +18,10 @@ func TestIntegrationBuildMapFromBytes_Error(t *testing.T) {
 	t.Parallel()
 
 	tests := []struct {
-		name     string
-		reqData  []byte
-		lockData []byte
-		checkFn  func(err error) error
+		name          string
+		reqData       []byte
+		lockData      []byte
+		expectedError string
 	}{
 		{
 			name:    "invalid json - req file",
@@ -29,13 +31,7 @@ func TestIntegrationBuildMapFromBytes_Error(t *testing.T) {
 					{"name": "vendor/pkg", "version": "1.0.0"}
 				]
 			}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing requirement file content: invalid JSON: invalid character 'i' looking for beginning of object key string" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
+			expectedError: "parsing requirement file content: invalid JSON: invalid character 'i' looking for beginning of object key string",
 		},
 		{
 			name: "invalid json - lock file",
@@ -43,14 +39,8 @@ func TestIntegrationBuildMapFromBytes_Error(t *testing.T) {
 				"require": {"vendor/pkg": "^1.0"},
 				"require-dev": {"vendor/test": "^1.0"}
 			}`),
-			lockData: []byte(`{invalid}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing lock file content: invalid JSON: invalid character 'i' looking for beginning of object key string" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
+			lockData:      []byte(`{invalid}`),
+			expectedError: "parsing lock file content: invalid JSON: invalid character 'i' looking for beginning of object key string",
 		},
 		{
 			name:    "empty input - req file",
@@ -60,13 +50,7 @@ func TestIntegrationBuildMapFromBytes_Error(t *testing.T) {
 					{"name": "vendor/pkg", "version": "1.0.0"}
 				]
 			}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing requirement file content: invalid format: empty input" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
+			expectedError: "parsing requirement file content: invalid format: empty input",
 		},
 		{
 			name: "empty input - lock file",
@@ -74,14 +58,8 @@ func TestIntegrationBuildMapFromBytes_Error(t *testing.T) {
 				"require": {"vendor/pkg": "^1.0"},
 				"require-dev": {"vendor/test": "^1.0"}
 			}`),
-			lockData: []byte{},
-			checkFn: func(err error) error {
-				if err.Error() != "parsing lock file content: invalid format: empty input" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
+			lockData:      []byte{},
+			expectedError: "parsing lock file content: invalid format: empty input",
 		},
 		{
 			name:    "missing require arrays - req file",
@@ -91,13 +69,7 @@ func TestIntegrationBuildMapFromBytes_Error(t *testing.T) {
 					{"name": "vendor/pkg", "version": "1.0.0"}
 				]
 			}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing requirement file content: invalid format: missing 'require' or 'require-dev' fields" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
+			expectedError: "parsing requirement file content: invalid format: missing 'require' or 'require-dev' fields",
 		},
 		{
 			name: "missing require arrays - lock file",
@@ -105,14 +77,8 @@ func TestIntegrationBuildMapFromBytes_Error(t *testing.T) {
 				"require": {"vendor/pkg": "^1.0"},
 				"require-dev": {"vendor/test": "^1.0"}
 			}`),
-			lockData: []byte(`{"other": "field"}`),
-			checkFn: func(err error) error {
-				if err.Error() != "parsing lock file content: invalid format: missing 'packages' or 'packages-dev' fields" {
-					return fmt.Errorf("unexpected error: %w", err)
-				}
-
-				return nil
-			},
+			lockData:      []byte(`{"other": "field"}`),
+			expectedError: "parsing lock file content: invalid format: missing 'packages' or 'packages-dev' fields",
 		},
 	}
 
@@ -122,9 +88,9 @@ func TestIntegrationBuildMapFromBytes_Error(t *testing.T) {
 
 			_, err := compdiff.BuildMapFromBytes(testCase.reqData, testCase.lockData)
 			if err == nil {
-				t.Errorf("an error is expected")
-			} else if err2 := testCase.checkFn(err); err2 != nil {
-				t.Error(err2)
+				t.Fatal("an error is expected")
+			} else if err.Error() != testCase.expectedError {
+				t.Errorf("unexpected error: %s", diff.CharacterDiff(testCase.expectedError, err.Error()))
 			}
 		})
 	}

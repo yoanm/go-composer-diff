@@ -1,8 +1,9 @@
 package compdiff_test
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/andreyvit/diff"
 
 	"github.com/yoanm/go-deps-diff/contract"
 	"github.com/yoanm/go-deps-diff/contract/semver"
@@ -10,6 +11,55 @@ import (
 
 	compdiff "github.com/yoanm/go-composer-diff"
 )
+
+func TestIntegration_FileDiff_Errors(t *testing.T) {
+	t.Parallel()
+
+	tests := []struct {
+		name          string
+		previous      *compdiff.FileInput
+		current       *compdiff.FileInput
+		expectedError string
+	}{
+		{
+			name:          "invalid previous req file",
+			previous:      &compdiff.FileInput{Lock: "./testdata/simple-composer.lock", Requirement: "/do.not.exist/previous-req-file"},
+			current:       &compdiff.FileInput{Lock: "./testdata/simple-composer.lock", Requirement: "./testdata/simple-composer.json"},
+			expectedError: "reading previous files: reading requirement file: open /do.not.exist/previous-req-file: no such file or directory",
+		},
+		{
+			name:          "invalid current req file",
+			previous:      &compdiff.FileInput{Lock: "./testdata/simple-composer.lock", Requirement: "./testdata/simple-composer.json"},
+			current:       &compdiff.FileInput{Lock: "./testdata/simple-composer.lock", Requirement: "/do.not.exist/current-req-file"},
+			expectedError: "reading current files: reading requirement file: open /do.not.exist/current-req-file: no such file or directory",
+		},
+		{
+			name:          "invalid previous lock file",
+			previous:      &compdiff.FileInput{Lock: "/do.not.exist/previous-lock-file", Requirement: "./testdata/simple-composer.json"},
+			current:       &compdiff.FileInput{Lock: "./testdata/simple-composer.lock", Requirement: "./testdata/simple-composer.json"},
+			expectedError: "reading previous files: reading lock file: open /do.not.exist/previous-lock-file: no such file or directory",
+		},
+		{
+			name:          "invalid current lock file",
+			previous:      &compdiff.FileInput{Lock: "./testdata/simple-composer.lock", Requirement: "./testdata/simple-composer.json"},
+			current:       &compdiff.FileInput{Lock: "/do.not.exist/current-lock-file", Requirement: "./testdata/simple-composer.json"},
+			expectedError: "reading current files: reading lock file: open /do.not.exist/current-lock-file: no such file or directory",
+		},
+	}
+
+	for _, testCase := range tests {
+		t.Run(testCase.name, func(t *testing.T) {
+			t.Parallel()
+
+			_, err := compdiff.FileDiff(testCase.previous, testCase.current)
+			if err == nil {
+				t.Fatal("an error is expected")
+			} else if err.Error() != testCase.expectedError {
+				t.Errorf("unexpected error: %s", diff.CharacterDiff(testCase.expectedError, err.Error()))
+			}
+		})
+	}
+}
 
 func TestIntegration_Diff_Errors(t *testing.T) {
 	t.Parallel()
@@ -147,7 +197,7 @@ func TestIntegration_Diff_Errors(t *testing.T) {
 			if err == nil {
 				t.Fatal("an error is expected")
 			} else if err.Error() != testCase.expectedError {
-				t.Fatal(fmt.Errorf("unexpected error: got %s, want %s", err.Error(), testCase.expectedError))
+				t.Errorf("unexpected error: %s", diff.CharacterDiff(testCase.expectedError, err.Error()))
 			}
 		})
 	}
