@@ -47,7 +47,7 @@ func (w *ComposerPackageWrapper) GetLink() string {
 //
 // A package is dev-only if it appears only in the packages-dev section of composer.lock.
 // However, a dev-only package can be a root requirement, a root dev requirement or a transitive dependency. If
-// you are looking for requirement vs dev requirement see IsRootRequirement and IsRootDevRequirement
+// you are looking for requirement vs dev requirement see IsRootRequirement and IsRootDevRequirement.
 func (w *ComposerPackageWrapper) IsDevOnly() bool {
 	return w.isDevOnly
 }
