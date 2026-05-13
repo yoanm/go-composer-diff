@@ -1,3 +1,4 @@
+# See https://github.com/yoanm/go-bench-regression/blob/master/.github/workflows/CI-benchmark.yml for the template
 name: Benchmark
 
 on:
@@ -14,15 +15,22 @@ concurrency:
   group: "${{ github.workflow }}-${{ github.head_ref || github.ref }}"
   cancel-in-progress: true
 
+defaults:
+  run:
+    shell: bash # Mandatory to take advantage of "-o pipefail" and stop execution at first error even with "cmd | tee ..."
+
 jobs:
   benchmark:
     name: Regression check
     if: github.event_name == 'push' || ( github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'with-benchmark') )
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout current code
+        uses: actions/checkout@v6
         with:
-          fetch-depth: 0
+          # Specify the repository (although mostly useful for PR from a fork)
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          ref: ${{ github.event.pull_request.head.sha || github.event.after }}
 
       - name: Set up Go
         uses: actions/setup-go@v6
@@ -32,37 +40,34 @@ jobs:
           cache: true
           cache-dependency-path: ./go.sum
 
-      - name: Install benchstat tool
+      - name: Install benchstat & bench-reg tools
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          go install golang.org/x/perf/cmd/benchstat@latest && \
-            go install github.com/yoanm/go-bench-regression/cmd/bench-reg@latest
+          go install golang.org/x/perf/cmd/benchstat@latest
+          go install github.com/yoanm/go-bench-regression/cmd/bench-reg@latest
 
       - name: Run benchmarks on current code
-        run: make benchmark bench_o="-count=7" | tee current.txt
+        run: make benchmark bench_o="-count=7" | tee ${{ runner.temp }}/current.txt
 
-      - name: PR - Checkout base branch
-        if: github.event_name == 'pull_request'
-        run: git checkout ${{ github.base_ref }}
-
-      - name: Push - Checkout previous commit
-        if: github.event_name == 'push'
-        run: git checkout HEAD~1
+      - name: Checkout original code
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.event.before }}
 
       - name: Run benchmarks on original code
-        run: make benchmark bench_o="-count=7" | tee previous.txt
+        run: make benchmark bench_o="-count=7" | tee ${{ runner.temp }}/previous.txt
 
       - name: Compare benchmarks
-        run: benchstat previous.txt current.txt | tee benchstat.txt
+        run: benchstat Previous=${{ runner.temp }}/previous.txt Current=${{ runner.temp }}/current.txt | tee ${{ runner.temp }}/benchstat.txt
 
       - name: Upload benchmark results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: benchmark-results
           path: |
-            current.txt
-            previous.txt
-            benchstat.txt
+            ${{ runner.temp }}/current.txt
+            ${{ runner.temp }}/previous.txt
+            ${{ runner.temp }}/benchstat.txt
 
       - name: Build summary
         run: |
@@ -79,9 +84,9 @@ jobs:
           # in case of error with bench-reg (which is the case when there is regressions)
           PIPE_FILE="${{ runner.temp }}/pipe"
           mkfifo "$PIPE_FILE"
-          tee -a "$GITHUB_STEP_SUMMARY < "$PIPE_FILE &""
-
-
+          tee -a "$GITHUB_STEP_SUMMARY" < "$PIPE_FILE" &
+          
+          
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "## Regressions" >> "$GITHUB_STEP_SUMMARY"
           echo '```' >> "$GITHUB_STEP_SUMMARY"
@@ -91,4 +96,3 @@ jobs:
           
           rm -f "$PIPE_FILE"
           exit $res
-  
