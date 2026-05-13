@@ -124,9 +124,5 @@ Support contains links to documentation and support.
 
 VersionReference contains the reference (commit hash or tag).
 
-## Sub Packages
-
-* [.tools](./.tools)
-
 ---
 Readme created from Go doc with [goreadme](https://github.com/posener/goreadme)
