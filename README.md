@@ -1,4 +1,20 @@
-# go-composer-diff
+# compdiff<br/><sup><sub>Composer dependecies comparator library</sub></sup>
+
+[![License](https://img.shields.io/github/license/yoanm/go-composer-diff.svg)](https://github.com/yoanm/go-composer-diff)
+[![Code size](https://img.shields.io/github/languages/code-size/yoanm/go-composer-diff.svg)](https://github.com/yoanm/go-composer-diff)
+[![Go Reference](https://pkg.go.dev/badge/github.com/yoanm/go-composer-diff.svg)](https://pkg.go.dev/github.com/yoanm/go-composer-diff)
+
+![Dependabot Status](https://flat.badgen.net/github/dependabot/yoanm/go-composer-diff)
+![Last commit](https://badgen.net/github/last-commit/yoanm/go-composer-diff)
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ebeacd3a91a74fef8a8ed4ea879ede72)](https://app.codacy.com/gh/yoanm/go-composer-diff/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Go Report Card](https://goreportcard.com/badge/github.com/yoanm/go-composer-diff?)](https://goreportcard.com/report/github.com/yoanm/go-composer-diff)
+
+[![CI](https://github.com/yoanm/go-composer-diff/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/yoanm/go-composer-diff/actions/workflows/CI.yml)
+[![codecov](https://codecov.io/gh/yoanm/go-composer-diff/branch/master/graph/badge.svg?token=NHdwEBUFK5)](https://codecov.io/gh/yoanm/go-composer-diff)
+
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/yoanm/go-composer-diff)
+
 
 A Go library for comparing two PHP Composer lock files and identifying package differences.
 
