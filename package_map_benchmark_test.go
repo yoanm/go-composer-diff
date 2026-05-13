@@ -10,12 +10,12 @@ import (
 
 func Benchmark_BuildMapFromBytes(b *testing.B) {
 	// Load fixture files
-	reqData, err := os.ReadFile("./testdata/composer-complex.json")
+	reqData, err := os.ReadFile("./testdata/complex-composer.json")
 	if err != nil {
 		b.Fatal(fmt.Errorf("error while reading requirement file = %w", err))
 	}
 
-	lockData, err := os.ReadFile("./testdata/composer-complex.lock")
+	lockData, err := os.ReadFile("./testdata/complex-composer.lock")
 	if err != nil {
 		b.Fatal(fmt.Errorf("error while reading lock file = %w", err))
 	}
