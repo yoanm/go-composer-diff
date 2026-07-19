@@ -26,14 +26,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout current code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           # Specify the repository (although mostly useful for PR from a fork)
           repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
           ref: ${{ github.event.pull_request.head.sha || github.event.after }}
 
       - name: Set up Go
-        uses: actions/setup-go@v6
+        uses: actions/setup-go@v7
         with:
           go-version-file: ./go.mod
           check-latest: true
@@ -50,7 +50,7 @@ jobs:
         run: make benchmark bench_o="-count=7" | tee ${{ runner.temp }}/current.txt
 
       - name: Checkout original code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: ${{ github.event.pull_request.base.sha || github.event.before }}
 
